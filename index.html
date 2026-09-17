@@ -44,7 +44,7 @@
     font-family:'IBM Plex Mono', monospace; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em;
   }
   .topnav .brand{color:var(--amber); font-weight:600;}
-  .topnav-links{display:flex; gap:20px;}
+  .topnav-links{display:flex; gap:18px; flex-wrap:wrap;}
   .topnav-links a{color:var(--chalk-dim); transition:color .15s;}
   .topnav-links a:hover{color:var(--amber);}
 
@@ -104,6 +104,7 @@
     font-weight:500;
     font-size:0.92rem;
     border:1px solid var(--amber);
+    cursor:pointer;
     transition:background .15s ease, color .15s ease;
   }
   .cta:hover{background:transparent; color:var(--amber);}
@@ -114,7 +115,7 @@
   .cta .arrow{transition:transform .15s ease;}
   .cta:hover .arrow{transform:translateX(3px);}
 
-  /* CARTOUCHE (title block) */
+  /* CARTOUCHE */
   .cartouche{
     margin-top:56px;
     border:1px solid var(--navy-line);
@@ -136,7 +137,7 @@
   }
   .cartouche .val{font-size:0.95rem; font-weight:500;}
 
-  /* SPEC SHEET (expertise) */
+  /* SPEC SHEET */
   h2{
     font-family:'Space Grotesk', sans-serif;
     font-weight:600;
@@ -162,7 +163,7 @@
   .spec-row .v{font-size:1rem; color:#e7edf2;}
   .lead-p{max-width:62ch; color:#c9d5df; margin-top:28px;}
 
-  /* OFFRE */
+  /* OFFRES / PROGRAMME / FAQ */
   .offer-grid{
     margin-top:36px;
     display:grid;
@@ -194,6 +195,19 @@
     margin-bottom:8px;
   }
   .offer-item p{color:#c9d5df; font-size:0.96rem; max-width:52ch;}
+
+  /* FAQ */
+  .faq-item{
+    background:var(--navy-deep);
+    padding:26px 28px;
+  }
+  .faq-item h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.1rem;
+    color:var(--chalk);
+    margin-bottom:8px;
+  }
+  .faq-item p{color:#c9d5df; font-size:0.95rem; max-width:56ch;}
 
   /* ZONE D'INTERVENTION */
   .zone-layout{
@@ -235,19 +249,18 @@
     .pin{animation:none; opacity:1;}
   }
 
-  /* CONTACT */
+  /* CONTACT BLOCK */
   .contact-block{
     margin-top:34px;
     border:1px solid var(--navy-line);
     padding:44px 36px;
   }
-  .contact-block .cartouche{margin-top:32px;}
   .contact-email{
     font-family:'Space Grotesk', sans-serif;
     font-weight:600;
     font-size:clamp(1.3rem, 3.6vw, 1.9rem);
     display:inline-block;
-    margin-top:6px;
+    margin-top:12px;
     border-bottom:2px solid var(--amber);
     padding-bottom:2px;
   }
@@ -280,7 +293,7 @@
     .cartouche div:last-child{border-bottom:none;}
     .spec-row{grid-template-columns:1fr; gap:6px;}
     .offer-item{grid-template-columns:1fr; gap:8px;}
-    .zone-layout{grid-template-columns:1fr;}
+    .zone-layout{grid-template-columns:1fr; gap:20px;}
     .compass-wrap{order:-1;}
   }
 </style>
@@ -291,7 +304,7 @@
 
 <main class="wrap">
 
-  <!-- NAVIGATION RAPIDE -->
+  <!-- NAVIGATION -->
   <header class="topnav">
     <span class="brand">SEITZ FORMATION</span>
     <nav class="topnav-links">
@@ -299,17 +312,17 @@
       <a href="#offre">Offre</a>
       <a href="#programme">Programme</a>
       <a href="#plaquette">Plaquette</a>
-      <a href="#zone">Zone</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- PLANCHE 01 — PRÉSENTATION -->
+  <!-- SECTION HERO -->
   <section class="hero">
     <p class="eyebrow">Présentation</p>
     <h1>SEITZ<br>FORMATION</h1>
     <p class="sub">Mathématiques · Physique · Chimie · Sciences appliquées</p>
-    <p class="lead">Formation professionnelle indépendante pour CFA, organismes de la branche métallurgie et entreprises industrielles. Une expertise scientifique au service de vos filières techniques, partout en Normandie.</p>
+    <p class="lead">Formation professionnelle indépendante pour CFA, organismes de formation et entreprises industrielles. Une expertise scientifique au service de vos filières techniques, partout en Normandie.</p>
     <a class="cta" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">Écrire à contact@seitzformation.fr <span class="arrow">→</span></a>
 
     <div class="cartouche">
@@ -319,7 +332,7 @@
     </div>
   </section>
 
-  <!-- PLANCHE 02 — EXPERTISE -->
+  <!-- EXPERTISE -->
   <section id="expertise">
     <p class="eyebrow">Expertise</p>
     <h2>Une double culture, scientifique et pédagogique</h2>
@@ -339,12 +352,12 @@
       </div>
       <div class="spec-row">
         <div class="k">Terrain</div>
-        <div class="v">Réseau UIMM, CFA, filières industrielles et techniques</div>
+        <div class="v">Interventions auprès des CFA, réseaux professionnels et filières industrielles</div>
       </div>
     </div>
   </section>
 
-  <!-- PLANCHE 03 — OFFRE -->
+  <!-- OFFRE -->
   <section id="offre">
     <p class="eyebrow">Offre</p>
     <h2>Trois façons de travailler ensemble</h2>
@@ -373,7 +386,7 @@
     </div>
   </section>
 
-  <!-- PLANCHE 03bis — PROGRAMME -->
+  <!-- PROGRAMME -->
   <section id="programme">
     <p class="eyebrow">Programme</p>
     <h2>Des modules à composer selon vos besoins</h2>
@@ -400,7 +413,7 @@
     </div>
   </section>
 
-  <!-- PLANCHE 03ter — PLAQUETTE 2026-2027 -->
+  <!-- PLAQUETTE 2026-2027 -->
   <section id="plaquette">
     <p class="eyebrow">Documentation</p>
     <h2>Plaquette 2026-2027</h2>
@@ -411,20 +424,19 @@
         <div class="label" style="font-family:'IBM Plex Mono', monospace; font-size:0.66rem; letter-spacing:0.12em; color:var(--chalk-dim); text-transform:uppercase; margin-bottom:6px;">Édition 2026-2027</div>
         <div style="font-family:'Space Grotesk', sans-serif; font-size:1.2rem; font-weight:600;">Plaquette pédagogique et institutionnelle (PDF)</div>
       </div>
-      <!-- Le fichier PDF est directement mis à la racine pour faciliter l'ajout via l'interface web -->
       <a class="cta" style="margin-top:0;" href="plaquette-2026-2027.pdf" target="_blank">
         📄 Télécharger la plaquette <span class="arrow">→</span>
       </a>
     </div>
   </section>
 
-  <!-- PLANCHE 04 — ZONE D'INTERVENTION -->
+  <!-- ZONE D'INTERVENTION -->
   <section id="zone">
     <p class="eyebrow">Zone d'intervention</p>
     <h2>Basé près de Caen, mobile en Normandie</h2>
     <div class="zone-layout">
       <div class="zone-text">
-        <p>Rayon d'intervention habituel autour de Caen, avec des déplacements possibles dans toute la Normandie selon le projet et la durée d'intervention. Frais de déplacement calculés selon la distance — à voir ensemble selon votre projet.</p>
+        <p>Rayon d'intervention habituel autour de Caen, avec des déplacements possibles dans toute la Normandie selon le projet et la durée d'intervention. Frais de déplacement calculés selon la distance.</p>
         <ul>
           <li><span>~1h</span>zone rapprochée (Vire, Saint-Lô, Falaise...)</li>
           <li><span>~1h30</span>Cherbourg, Alençon, Lisieux</li>
@@ -478,14 +490,42 @@
     </div>
   </section>
 
-  <!-- PLANCHE 05 — CONTACT -->
+  <!-- FAQ -->
+  <section id="faq">
+    <p class="eyebrow">Foire Aux Questions</p>
+    <h2>Questions fréquentes</h2>
+    <div class="offer-grid" style="margin-top:34px;">
+      <div class="faq-item">
+        <h3>Quels sont les délais pour mettre en place une formation ?</h3>
+        <p>Les interventions sont planifiées en concertation avec votre calendrier pédagogique ou industriel. Un délai d'anticipation de quelques semaines est idéal pour concevoir des supports sur-mesure adaptés à votre promotion.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Intervenez-vous uniquement en présentiel ?</h3>
+        <p>L'essentiel des sessions se fait en présentiel sur vos sites ou au sein des structures partenaires en Normandie. Des formats hybrides ou des compléments de suivi à distance sont également possibles selon le projet.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Comment sont construits les programmes scientifiques ?</h3>
+        <p>Chaque module est recadré selon les référentiels officiels visés (BTS, titres professionnels, etc.) et ancré dans des applications techniques concrètes issues du terrain.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Comment sont calculés les tarifs des interventions ?</h3>
+        <p>Chaque projet fait l'objet d'un devis personnalisé. Le tarif dépend du volume horaire global, de la nature de la prestation (animation directe, ingénierie pédagogique, création de supports) et des frais de déplacement éventuels depuis Caen.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Comment vérifier vos disponibilités pour planifier une formation ?</h3>
+        <p>Les plannings d'intervention sont établis en concertation directe selon vos contraintes calendaires et le volume horaire visé. Il est recommandé d'anticiper la demande quelques semaines ou mois à l'avance pour sécuriser les créneaux.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact">
     <p class="eyebrow">Contact</p>
     <div class="contact-block">
       <h2>Un projet de formation ?</h2>
-      <p class="lead-p" style="margin-top:10px;">Écrivez-moi pour échanger sur vos besoins — programme, filière, calendrier — et construire une intervention adaptée.</p>
+      <p class="lead-p" style="margin-top:10px;">Écrivez-moi directement pour échanger sur vos besoins, vos plannings ou vos modules spécifiques.</p>
       <a class="contact-email" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">contact@seitzformation.fr</a>
-      <div class="cartouche" style="margin-top:32px;">
+      <div class="cartouche" style="margin-top:36px;">
         <div><div class="label">Formateur</div><div class="val">Thomas Seitz</div></div>
         <div><div class="label">Contact</div><div class="val">contact@seitzformation.fr</div></div>
         <div><div class="label">Zone</div><div class="val">Normandie</div></div>
@@ -493,7 +533,7 @@
     </div>
   </section>
 
-  <!-- PIED DE PAGE LÉGAL -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-row">
       <span>SEITZ FORMATION — EURL au capital de 500 €</span>
