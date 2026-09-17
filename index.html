@@ -26,7 +26,8 @@
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
-  a{color:inherit;}
+  a{color:inherit; text-decoration:none;}
+  
   .grid-overlay{
     position:fixed; inset:0; pointer-events:none; z-index:0;
     background-image:
@@ -35,6 +36,17 @@
     opacity:0.7;
   }
   .wrap{max-width:920px; margin:0 auto; padding:0 28px; position:relative; z-index:1;}
+
+  /* TOP NAV */
+  .topnav{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:20px 0; border-bottom:1px solid var(--navy-line);
+    font-family:'IBM Plex Mono', monospace; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em;
+  }
+  .topnav .brand{color:var(--amber); font-weight:600;}
+  .topnav-links{display:flex; gap:20px;}
+  .topnav-links a{color:var(--chalk-dim); transition:color .15s;}
+  .topnav-links a:hover{color:var(--amber);}
 
   .eyebrow{
     font-family:'IBM Plex Mono', monospace;
@@ -59,7 +71,7 @@
   section:last-of-type{border-bottom:none;}
 
   /* HERO */
-  .hero{padding-top:110px;}
+  .hero{padding-top:70px;}
   .hero h1{
     font-family:'Space Grotesk', sans-serif;
     font-weight:700;
@@ -91,7 +103,6 @@
     font-family:'IBM Plex Mono', monospace;
     font-weight:500;
     font-size:0.92rem;
-    text-decoration:none;
     border:1px solid var(--amber);
     transition:background .15s ease, color .15s ease;
   }
@@ -241,15 +252,29 @@
     padding-bottom:2px;
   }
 
+  /* FOOTER */
   footer{
-    padding:34px 0 60px;
+    padding:40px 0 60px;
+    border-top:1px solid var(--navy-line);
+    margin-top:40px;
     font-family:'IBM Plex Mono', monospace;
     font-size:0.72rem;
     color:var(--chalk-dim);
     letter-spacing:0.04em;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .footer-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
   }
 
   @media (max-width:720px){
+    .topnav-links{display:none;}
     .cartouche{grid-template-columns:1fr;}
     .cartouche div{border-right:none; border-bottom:1px solid var(--navy-line);}
     .cartouche div:last-child{border-bottom:none;}
@@ -266,29 +291,42 @@
 
 <main class="wrap">
 
+  <!-- NAVIGATION RAPIDE -->
+  <header class="topnav">
+    <span class="brand">SEITZ FORMATION</span>
+    <nav class="topnav-links">
+      <a href="#expertise">Expertise</a>
+      <a href="#offre">Offre</a>
+      <a href="#programme">Programme</a>
+      <a href="#plaquette">Plaquette</a>
+      <a href="#zone">Zone</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
   <!-- PLANCHE 01 — PRÉSENTATION -->
   <section class="hero">
     <p class="eyebrow">Présentation</p>
     <h1>SEITZ<br>FORMATION</h1>
     <p class="sub">Mathématiques · Physique · Chimie · Sciences appliquées</p>
     <p class="lead">Formation professionnelle indépendante pour CFA, organismes de la branche métallurgie et entreprises industrielles. Une expertise scientifique au service de vos filières techniques, partout en Normandie.</p>
-    <a class="cta" href="mailto:contact@seitzformation.fr">Écrire à contact@seitzformation.fr <span class="arrow">→</span></a>
+    <a class="cta" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">Écrire à contact@seitzformation.fr <span class="arrow">→</span></a>
 
     <div class="cartouche">
       <div><div class="label">Formateur</div><div class="val">Thomas Seitz</div></div>
-      <div><div class="label">Discipline</div><div class="val">Sciences appliquées</div></div>
+      <div><div class="label">Disciplines</div><div class="val">Maths &amp; Sciences</div></div>
       <div><div class="label">Zone</div><div class="val">Normandie</div></div>
     </div>
   </section>
 
   <!-- PLANCHE 02 — EXPERTISE -->
-  <section>
+  <section id="expertise">
     <p class="eyebrow">Expertise</p>
     <h2>Une double culture, scientifique et pédagogique</h2>
     <p class="lead-p">Quinze ans de formation professionnelle, une thèse de doctorat en chimie, et une pratique construite au contact direct des filières industrielles — pour transformer des notions théoriques en compétences mobilisables sur le terrain.</p>
     <div class="specs">
       <div class="spec-row">
-        <div class="k">Discipline</div>
+        <div class="k">Disciplines</div>
         <div class="v">Mathématiques, physique, chimie, sciences appliquées</div>
       </div>
       <div class="spec-row">
@@ -307,7 +345,7 @@
   </section>
 
   <!-- PLANCHE 03 — OFFRE -->
-  <section>
+  <section id="offre">
     <p class="eyebrow">Offre</p>
     <h2>Trois façons de travailler ensemble</h2>
     <div class="offer-grid">
@@ -336,7 +374,7 @@
   </section>
 
   <!-- PLANCHE 03bis — PROGRAMME -->
-  <section>
+  <section id="programme">
     <p class="eyebrow">Programme</p>
     <h2>Des modules à composer selon vos besoins</h2>
     <p class="lead-p" style="margin-top:0;">Liste non exhaustive, ingénierie sur demande — chaque module est adapté au référentiel et au niveau du public visé.</p>
@@ -362,8 +400,26 @@
     </div>
   </section>
 
+  <!-- PLANCHE 03ter — PLAQUETTE 2026-2027 -->
+  <section id="plaquette">
+    <p class="eyebrow">Documentation</p>
+    <h2>Plaquette 2026-2027</h2>
+    <p class="lead-p">Retrouvez l'intégralité de notre offre, nos références et nos modalités d'intervention dans notre document de présentation officiel.</p>
+    
+    <div class="contact-block" style="margin-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+      <div>
+        <div class="label" style="font-family:'IBM Plex Mono', monospace; font-size:0.66rem; letter-spacing:0.12em; color:var(--chalk-dim); text-transform:uppercase; margin-bottom:6px;">Édition 2026-2027</div>
+        <div style="font-family:'Space Grotesk', sans-serif; font-size:1.2rem; font-weight:600;">Plaquette pédagogique et institutionnelle (PDF)</div>
+      </div>
+      <!-- Le fichier PDF est directement mis à la racine pour faciliter l'ajout via l'interface web -->
+      <a class="cta" style="margin-top:0;" href="plaquette-2026-2027.pdf" target="_blank">
+        📄 Télécharger la plaquette <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
   <!-- PLANCHE 04 — ZONE D'INTERVENTION -->
-  <section>
+  <section id="zone">
     <p class="eyebrow">Zone d'intervention</p>
     <h2>Basé près de Caen, mobile en Normandie</h2>
     <div class="zone-layout">
@@ -377,7 +433,7 @@
         </ul>
       </div>
       <div class="compass-wrap">
-        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma de rayon d'intervention centré sur Caen, avec Vire, Saint-Lô et Falaise à 1h, Cherbourg, Alençon et Lisieux à 1h30, Rouen et Le Havre à 2h, orientés selon leur position réelle">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma de rayon d'intervention centré sur Caen">
           <circle cx="160" cy="160" r="65" stroke="var(--navy-line)" stroke-width="1"/>
           <circle class="arc a1" cx="160" cy="160" r="65" stroke="#f2b705" stroke-width="1.4"/>
           <circle cx="160" cy="160" r="100" stroke="var(--navy-line)" stroke-width="1"/>
@@ -387,12 +443,10 @@
           <line x1="160" y1="12" x2="160" y2="308" stroke="var(--navy-line)" stroke-width="1"/>
           <line x1="12" y1="160" x2="308" y2="160" stroke="var(--navy-line)" stroke-width="1"/>
 
-          <!-- rayons (alignés sur une diagonale libre) -->
           <text x="221" y="182" text-anchor="middle" fill="#a9bccd" font-family="IBM Plex Mono, monospace" font-size="9.5">1H</text>
           <text x="254" y="194" text-anchor="middle" fill="#a9bccd" font-family="IBM Plex Mono, monospace" font-size="9.5">1H30</text>
           <text x="287" y="206" text-anchor="middle" fill="#a9bccd" font-family="IBM Plex Mono, monospace" font-size="9.5">2H</text>
 
-          <!-- ~1h : Vire (SO), Saint-Lô (ONO), Falaise (S) -->
           <circle class="pin" cx="118" cy="210" r="2.5" fill="#a9bccd"/>
           <text class="pin" x="118" y="224" text-anchor="middle" fill="#dbe4ec" font-family="IBM Plex Mono, monospace" font-size="9.5">VIRE</text>
 
@@ -402,7 +456,6 @@
           <circle class="pin" cx="166" cy="225" r="2.5" fill="#a9bccd"/>
           <text class="pin" x="166" y="239" text-anchor="middle" fill="#dbe4ec" font-family="IBM Plex Mono, monospace" font-size="9.5">FALAISE</text>
 
-          <!-- ~1h30 : Cherbourg (N), Alençon (SSE), Lisieux (ENE) -->
           <circle class="pin" cx="143" cy="62" r="2.8" fill="#f2b705"/>
           <text class="pin" x="143" y="52" text-anchor="middle" fill="#f4f2e9" font-family="IBM Plex Mono, monospace" font-size="10">CHERBOURG</text>
 
@@ -412,14 +465,12 @@
           <circle class="pin" cx="257" cy="134" r="2.5" fill="#a9bccd"/>
           <text class="pin" x="257" y="126" text-anchor="middle" fill="#dbe4ec" font-family="IBM Plex Mono, monospace" font-size="9.5">LISIEUX</text>
 
-          <!-- ~2h : Le Havre (NE), Rouen (ENE) -->
           <circle class="pin" cx="237" cy="49" r="2.5" fill="#a9bccd"/>
           <text class="pin" x="237" y="39" text-anchor="middle" fill="#dbe4ec" font-family="IBM Plex Mono, monospace" font-size="9.5">LE HAVRE</text>
 
           <circle class="pin" cx="282" cy="103" r="2.5" fill="#a9bccd"/>
           <text class="pin" x="282" y="93" text-anchor="middle" fill="#dbe4ec" font-family="IBM Plex Mono, monospace" font-size="9.5">ROUEN</text>
 
-          <!-- Caen, centre -->
           <circle class="pin" cx="160" cy="160" r="5" fill="#f2b705"/>
           <text class="pin" x="160" y="145" text-anchor="middle" fill="#f4f2e9" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1">CAEN</text>
         </svg>
@@ -428,13 +479,13 @@
   </section>
 
   <!-- PLANCHE 05 — CONTACT -->
-  <section>
+  <section id="contact">
     <p class="eyebrow">Contact</p>
     <div class="contact-block">
       <h2>Un projet de formation ?</h2>
       <p class="lead-p" style="margin-top:10px;">Écrivez-moi pour échanger sur vos besoins — programme, filière, calendrier — et construire une intervention adaptée.</p>
-      <a class="contact-email" href="mailto:contact@seitzformation.fr">contact@seitzformation.fr</a>
-      <div class="cartouche">
+      <a class="contact-email" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">contact@seitzformation.fr</a>
+      <div class="cartouche" style="margin-top:32px;">
         <div><div class="label">Formateur</div><div class="val">Thomas Seitz</div></div>
         <div><div class="label">Contact</div><div class="val">contact@seitzformation.fr</div></div>
         <div><div class="label">Zone</div><div class="val">Normandie</div></div>
@@ -442,7 +493,17 @@
     </div>
   </section>
 
-  <footer>SEITZ FORMATION — Mathématiques &amp; Sciences Physiques appliquées</footer>
+  <!-- PIED DE PAGE LÉGAL -->
+  <footer>
+    <div class="footer-row">
+      <span>SEITZ FORMATION — EURL au capital de 500 €</span>
+      <span>SIREN : 108720871 — NDA : 28140495014</span>
+    </div>
+    <div class="footer-row" style="color: var(--chalk-dim); opacity: 0.8;">
+      <span>Formateur indépendant · Mathématiques &amp; Sciences Physiques · Normandie</span>
+      <span>© 2026 Seitz Formation</span>
+    </div>
+  </footer>
 
 </main>
 
