@@ -92,11 +92,17 @@
     font-size:1.08rem;
     color:#dbe4ec;
   }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    align-items:center;
+    margin-top:38px;
+  }
   .cta{
     display:inline-flex;
     align-items:center;
     gap:10px;
-    margin-top:38px;
     padding:14px 22px;
     background:var(--amber);
     color:#1a1305;
@@ -108,34 +114,22 @@
     transition:background .15s ease, color .15s ease;
   }
   .cta:hover{background:transparent; color:var(--amber);}
+  .cta.secondary{
+    background:var(--navy-panel);
+    color:var(--chalk);
+    border:1px solid rgba(242, 183, 5, 0.3);
+  }
+  .cta.secondary:hover{
+    border-color:var(--amber);
+    color:var(--amber);
+    background:rgba(242, 183, 5, 0.08);
+  }
   .cta:focus-visible, a:focus-visible, button:focus-visible{
     outline:2px solid var(--amber);
     outline-offset:3px;
   }
   .cta .arrow{transition:transform .15s ease;}
   .cta:hover .arrow{transform:translateX(3px);}
-
-  /* CARTOUCHE */
-  .cartouche{
-    margin-top:56px;
-    border:1px solid var(--navy-line);
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-  }
-  .cartouche div{
-    padding:16px 18px;
-    border-right:1px solid var(--navy-line);
-  }
-  .cartouche div:last-child{border-right:none;}
-  .cartouche .label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.66rem;
-    letter-spacing:0.12em;
-    color:var(--chalk-dim);
-    text-transform:uppercase;
-    margin-bottom:6px;
-  }
-  .cartouche .val{font-size:0.95rem; font-weight:500;}
 
   /* SPEC SHEET */
   h2{
@@ -288,9 +282,6 @@
 
   @media (max-width:720px){
     .topnav-links{display:none;}
-    .cartouche{grid-template-columns:1fr;}
-    .cartouche div{border-right:none; border-bottom:1px solid var(--navy-line);}
-    .cartouche div:last-child{border-bottom:none;}
     .spec-row{grid-template-columns:1fr; gap:6px;}
     .offer-item{grid-template-columns:1fr; gap:8px;}
     .zone-layout{grid-template-columns:1fr; gap:20px;}
@@ -311,7 +302,6 @@
       <a href="#expertise">Expertise</a>
       <a href="#offre">Offre</a>
       <a href="#programme">Programme</a>
-      <a href="#plaquette">Plaquette</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -322,21 +312,19 @@
     <p class="eyebrow">Présentation</p>
     <h1>SEITZ<br>FORMATION</h1>
     <p class="sub">Mathématiques · Physique · Chimie · Sciences appliquées</p>
-    <p class="lead">Formation professionnelle indépendante pour CFA, organismes de formation et entreprises industrielles. Une expertise scientifique au service de vos filières techniques, partout en Normandie.</p>
-    <a class="cta" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">Écrire à contact@seitzformation.fr <span class="arrow">→</span></a>
-
-    <div class="cartouche">
-      <div><div class="label">Formateur</div><div class="val">Thomas Seitz</div></div>
-      <div><div class="label">Disciplines</div><div class="val">Maths &amp; Sciences</div></div>
-      <div><div class="label">Zone</div><div class="val">Normandie</div></div>
+    <p class="lead">Formation indépendante pour CFA, organismes de formation et entreprises industrielles. Une expertise scientifique au service de vos filières techniques, partout en Normandie.</p>
+    
+    <div class="hero-actions">
+      <a class="cta" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">Écrire à contact@seitzformation.fr <span class="arrow">→</span></a>
+      <a class="cta secondary" href="plaquette-2026-2027.pdf" target="_blank">📄 Plaquette 2026-2027 (PDF) <span class="arrow">→</span></a>
     </div>
   </section>
 
   <!-- EXPERTISE -->
   <section id="expertise">
     <p class="eyebrow">Expertise</p>
-    <h2>Une double culture, scientifique et pédagogique</h2>
-    <p class="lead-p">Quinze ans de formation professionnelle, une thèse de doctorat en chimie, et une pratique construite au contact direct des filières industrielles — pour transformer des notions théoriques en compétences mobilisables sur le terrain.</p>
+    <h2>Le formateur Thomas Seitz</h2>
+    <p class="lead-p">Quinze ans d'enseignement et de formation, une thèse de doctorat en chimie, et une pratique construite au contact direct des filières industrielles — pour transformer des notions théoriques en compétences mobilisables sur le terrain.</p>
     <div class="specs">
       <div class="spec-row">
         <div class="k">Disciplines</div>
@@ -348,11 +336,11 @@
       </div>
       <div class="spec-row">
         <div class="k">Expérience</div>
-        <div class="v">15 ans de formation professionnelle</div>
+        <div class="v">15 ans d'enseignement et de formation</div>
       </div>
       <div class="spec-row">
         <div class="k">Terrain</div>
-        <div class="v">Interventions auprès des CFA, réseaux professionnels et filières industrielles</div>
+        <div class="v">Interventions auprès des CFA, réseaux professionnels et filières industrielles (UIMM, ITII...)</div>
       </div>
     </div>
   </section>
@@ -410,23 +398,6 @@
           <p>Mécanique, remise à niveau, préparation aux CCF et aux concours — construits sur mesure selon le référentiel visé.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- PLAQUETTE 2026-2027 -->
-  <section id="plaquette">
-    <p class="eyebrow">Documentation</p>
-    <h2>Plaquette 2026-2027</h2>
-    <p class="lead-p">Retrouvez l'intégralité de notre offre, nos références et nos modalités d'intervention dans notre document de présentation officiel.</p>
-    
-    <div class="contact-block" style="margin-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
-      <div>
-        <div class="label" style="font-family:'IBM Plex Mono', monospace; font-size:0.66rem; letter-spacing:0.12em; color:var(--chalk-dim); text-transform:uppercase; margin-bottom:6px;">Édition 2026-2027</div>
-        <div style="font-family:'Space Grotesk', sans-serif; font-size:1.2rem; font-weight:600;">Plaquette pédagogique et institutionnelle (PDF)</div>
-      </div>
-      <a class="cta" style="margin-top:0;" href="plaquette-2026-2027.pdf" target="_blank">
-        📄 Télécharger la plaquette <span class="arrow">→</span>
-      </a>
     </div>
   </section>
 
@@ -525,11 +496,6 @@
       <h2>Un projet de formation ?</h2>
       <p class="lead-p" style="margin-top:10px;">Écrivez-moi directement pour échanger sur vos besoins, vos plannings ou vos modules spécifiques.</p>
       <a class="contact-email" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">contact@seitzformation.fr</a>
-      <div class="cartouche" style="margin-top:36px;">
-        <div><div class="label">Formateur</div><div class="val">Thomas Seitz</div></div>
-        <div><div class="label">Contact</div><div class="val">contact@seitzformation.fr</div></div>
-        <div><div class="label">Zone</div><div class="val">Normandie</div></div>
-      </div>
     </div>
   </section>
 
