@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEITZ FORMATION — Mathématiques & Sciences Physiques</title>
+<title>Formateur maths &amp; physique-chimie en Normandie | SEITZ FORMATION</title>
 <meta name="description" content="Formation en mathématiques, physique et chimie pour CFA, organismes de formation et industriels en Normandie. Docteur en chimie, basé près de Caen.">
 <link rel="canonical" href="https://seitzformation.fr/">
 <meta name="theme-color" content="#0b1f33">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="SEITZ FORMATION">
-<meta property="og:title" content="SEITZ FORMATION — Mathématiques & Sciences Physiques">
+<meta property="og:title" content="Formateur maths &amp; physique-chimie en Normandie | SEITZ FORMATION">
 <meta property="og:description" content="Formation en mathématiques, physique et chimie pour CFA, organismes de formation et industriels en Normandie. Docteur en chimie, basé près de Caen.">
 <meta property="og:url" content="https://seitzformation.fr/">
 <meta property="og:image" content="https://seitzformation.fr/og-image.png">
@@ -21,6 +21,9 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SEITZ FORMATION — mathématiques, physique, chimie pour les filières industrielles en Normandie">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"SEITZ FORMATION","url":"https://seitzformation.fr/","image":"https://seitzformation.fr/og-image.png","description":"Formation en mathématiques, physique et chimie pour CFA, organismes de formation et industriels en Normandie.","email":"contact@seitzformation.fr","telephone":"+33630143083","address":{"@type":"PostalAddress","streetAddress":"3 allée du Pressoir","postalCode":"14210","addressLocality":"Tourville-sur-Odon","addressRegion":"Normandie","addressCountry":"FR"},"areaServed":{"@type":"AdministrativeArea","name":"Normandie"},"founder":{"@type":"Person","name":"Thomas Seitz","jobTitle":"Formateur en mathématiques et sciences physiques","image":"https://seitzformation.fr/thomas-seitz.webp","sameAs":["https://fr.linkedin.com/in/thomseitz"]},"sameAs":["https://fr.linkedin.com/in/thomseitz"]}
+</script>
 <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -63,6 +66,8 @@
   /* TOP NAV */
   .topnav{
     display:flex; justify-content:space-between; align-items:center;
+    position:sticky; top:0; z-index:5;
+    background:rgba(11,31,51,0.97); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
     padding:20px 0; border-bottom:1px solid var(--navy-line);
     font-family:'IBM Plex Mono', monospace; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em;
   }
@@ -88,6 +93,7 @@
 
   section{
     position:relative;
+    scroll-margin-top:64px;
     padding:88px 0 64px;
     border-bottom:1px solid var(--navy-line);
   }
@@ -179,6 +185,16 @@
   }
   .spec-row .v{font-size:1rem; color:#e7edf2;}
   .lead-p{max-width:62ch; color:#c9d5df; margin-top:28px;}
+  .who{display:flex; align-items:center; gap:22px; margin-bottom:6px;}
+  .who img{width:96px; height:auto; flex:none;}
+  .who h2{margin-bottom:0;}
+  .text-link{display:inline-block; margin-top:16px; font-family:'IBM Plex Mono', monospace; font-size:0.85rem; color:var(--amber); border-bottom:1px solid rgba(242,183,5,.4);}
+  .text-link:hover{border-color:var(--amber);}
+  .contact-alt{display:flex; flex-wrap:wrap; gap:12px 28px; align-items:center; margin-top:26px; font-family:'IBM Plex Mono', monospace; font-size:0.9rem; color:var(--chalk-dim);}
+  .contact-alt a{color:var(--chalk); border-bottom:1px solid rgba(242,183,5,.4);}
+  .contact-alt a:hover{color:var(--amber);}
+  .copy-btn{font:inherit; font-size:0.8rem; color:var(--chalk); background:var(--navy-panel); border:1px solid rgba(242,183,5,.3); padding:7px 12px; cursor:pointer;}
+  .copy-btn:hover{border-color:var(--amber); color:var(--amber);}
 
   /* OFFRES / PROGRAMME / FAQ */
   .offer-grid{
@@ -316,7 +332,12 @@
   .legal a:hover{color:var(--amber);}
 
   @media (max-width:720px){
-    .topnav-links{display:none;}
+    .topnav{flex-direction:column; align-items:flex-start; gap:10px; padding:14px 0 12px;}
+    .topnav-links{flex-wrap:nowrap; overflow-x:auto; gap:16px; width:100%; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+    .topnav-links::-webkit-scrollbar{display:none;}
+    .topnav-links a{white-space:nowrap; padding:4px 0;}
+    section{scroll-margin-top:96px;}
+    .who img{width:76px;}
     .spec-row{grid-template-columns:1fr; gap:6px;}
     .offer-item{grid-template-columns:1fr; gap:8px;}
     .zone-layout{grid-template-columns:1fr; gap:20px;}
@@ -349,7 +370,7 @@
     <p class="eyebrow">Présentation</p>
     <h1>SEITZ<br>FORMATION</h1>
     <p class="sub">Mathématiques · Physique · Chimie · Sciences appliquées</p>
-    <p class="lead">Formation indépendante pour CFA, organismes de formation et entreprises industrielles. Une expertise scientifique au service de vos filières techniques, partout en Normandie.</p>
+    <p class="lead">Formateur indépendant en mathématiques et physique-chimie pour CFA, organismes de formation et entreprises industrielles. Une expertise scientifique au service de vos filières techniques, partout en Normandie.</p>
     
     <div class="hero-actions">
       <a class="cta" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">Écrire à contact@seitzformation.fr <span class="arrow">→</span></a>
@@ -360,7 +381,10 @@
   <!-- EXPERTISE -->
   <section id="expertise">
     <p class="eyebrow">Expertise</p>
-    <h2>Le formateur Thomas Seitz</h2>
+    <div class="who">
+      <img src="thomas-seitz.webp" width="241" height="227" alt="Portrait de Thomas Seitz" loading="lazy" decoding="async">
+      <h2>Le formateur Thomas Seitz</h2>
+    </div>
     <p class="lead-p">Quinze ans d'enseignement et de formation, une thèse de doctorat en chimie, et une pratique construite au contact direct des filières industrielles — pour transformer des notions théoriques en compétences mobilisables sur le terrain.</p>
     <div class="specs">
       <div class="spec-row">
@@ -379,7 +403,12 @@
         <div class="k">Terrain</div>
         <div class="v">Interventions auprès des CFA, réseaux professionnels et filières industrielles (UIMM, ITII...)</div>
       </div>
+      <div class="spec-row">
+        <div class="k">Filières</div>
+        <div class="v">BTS industriels (CRCI, CICN, MS, Pilote de procédés, Électrotechnique) et cycles ingénieur</div>
+      </div>
     </div>
+    <a class="text-link" href="https://fr.linkedin.com/in/thomseitz" target="_blank" rel="noopener">Voir mon profil LinkedIn →</a>
   </section>
 
   <!-- OFFRE -->
@@ -390,8 +419,8 @@
       <div class="offer-item">
         <div class="tag">Formation</div>
         <div>
-          <h3>Formation professionnelle continue</h3>
-          <p>Sessions en présentiel, individuelles ou collectives, conçues et adaptées à chaque filière — des BTS industriels à tout parcours technique intégrant des mathématiques ou des sciences physiques.</p>
+          <h3>Interventions en CFA et formation continue</h3>
+          <p>Cours en présentiel pour vos apprentis et stagiaires, individuels ou collectifs, conçus et adaptés à chaque filière — des BTS industriels aux cycles ingénieur, et tout parcours technique intégrant des mathématiques ou des sciences physiques.</p>
         </div>
       </div>
       <div class="offer-item">
@@ -505,7 +534,7 @@
     <div class="offer-grid" style="margin-top:34px;">
       <div class="faq-item">
         <h3>Quelles sont vos disponibilités ?</h3>
-        <p>Je suis disponible les <strong>jeudis</strong> (et ponctuellement les <strong>mercredis</strong>). Mes lundis, mardis et vendredis sont déjà engagés pour l'année scolaire.</p>
+        <p>Pour l'année 2026-2027, je suis disponible les <strong>jeudis</strong> (et ponctuellement les <strong>mercredis</strong>). Mes lundis, mardis et vendredis sont déjà engagés.</p>
       </div>
       <div class="faq-item">
         <h3>Comment sont calculés les tarifs des interventions ?</h3>
@@ -533,6 +562,11 @@
       <h2>Un projet de formation ?</h2>
       <p class="lead-p" style="margin-top:10px;">Écrivez-moi directement pour échanger sur vos besoins, vos plannings ou vos modules spécifiques.</p>
       <a class="contact-email" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">contact@seitzformation.fr</a>
+      <div class="contact-alt">
+        <button type="button" class="copy-btn" data-copy="contact@seitzformation.fr">Copier l'adresse</button>
+        <span>Tél. <a href="tel:+33630143083">06 30 14 30 83</a></span>
+        <a href="https://fr.linkedin.com/in/thomseitz" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </section>
 
@@ -568,5 +602,15 @@
 
 </main>
 
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-copy'), label = b.textContent;
+      var done = function () { b.textContent = 'Adresse copiée ✓'; setTimeout(function () { b.textContent = label; }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () { window.prompt('Adresse e-mail :', t); });
+      else window.prompt('Adresse e-mail :', t);
+    });
+  });
+</script>
 </body>
 </html>
