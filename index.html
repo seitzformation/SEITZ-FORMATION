@@ -4,10 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SEITZ FORMATION — Mathématiques & Sciences Physiques</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Formation en mathématiques, physique et chimie pour CFA, organismes de formation et industriels en Normandie. Docteur en chimie, basé près de Caen.">
+<link rel="canonical" href="https://seitzformation.fr/">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SEITZ FORMATION">
+<meta property="og:title" content="SEITZ FORMATION — Mathématiques & Sciences Physiques">
+<meta property="og:description" content="Formation en mathématiques, physique et chimie pour CFA, organismes de formation et industriels en Normandie. Docteur en chimie, basé près de Caen.">
+<meta property="og:url" content="https://seitzformation.fr/">
+<meta property="og:image" content="https://seitzformation.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SEITZ FORMATION — mathématiques, physique, chimie pour les filières industrielles en Normandie">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* Polices hébergées sur le site (aucun appel à des serveurs tiers) — licence SIL OFL 1.1 */
+  @font-face{font-family:'Space Grotesk'; font-style:normal; font-weight:600; font-display:swap; src:url(fonts/space-grotesk-latin-600-normal.woff2) format('woff2');}
+  @font-face{font-family:'Space Grotesk'; font-style:normal; font-weight:700; font-display:swap; src:url(fonts/space-grotesk-latin-700-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Sans'; font-style:normal; font-weight:400; font-display:swap; src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Sans'; font-style:normal; font-weight:600; font-display:swap; src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Mono'; font-style:normal; font-weight:400; font-display:swap; src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Mono'; font-style:normal; font-weight:500; font-display:swap; src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');}
   :root{
     --navy-deep:#0b1f33;
     --navy-panel:#122c47;
@@ -279,6 +302,18 @@
     flex-wrap:wrap;
     gap:15px;
   }
+  .footer-nda{color:var(--chalk); opacity:.85; line-height:1.6;}
+  .legal{border-top:1px solid var(--navy-line); padding-top:12px;}
+  .legal summary{cursor:pointer; color:var(--chalk); width:max-content; list-style:none;}
+  .legal summary::-webkit-details-marker{display:none;}
+  .legal summary::before{content:"+"; color:var(--amber); display:inline-block; width:1.2em;}
+  .legal[open] summary::before{content:"−";}
+  .legal summary:hover{color:var(--amber);}
+  .legal dl{display:grid; grid-template-columns:200px 1fr; gap:10px 24px; margin-top:16px; line-height:1.6;}
+  .legal dt{color:var(--amber); text-transform:uppercase; letter-spacing:0.1em;}
+  .legal dd{color:#c9d5df; font-family:'IBM Plex Sans', sans-serif; font-size:0.82rem; letter-spacing:0;}
+  .legal a{border-bottom:1px solid rgba(242,183,5,.4);}
+  .legal a:hover{color:var(--amber);}
 
   @media (max-width:720px){
     .topnav-links{display:none;}
@@ -286,6 +321,8 @@
     .offer-item{grid-template-columns:1fr; gap:8px;}
     .zone-layout{grid-template-columns:1fr; gap:20px;}
     .compass-wrap{order:-1;}
+    .legal dl{grid-template-columns:1fr; gap:4px;}
+    .legal dd{margin-bottom:10px;}
   }
 </style>
 </head>
@@ -316,7 +353,7 @@
     
     <div class="hero-actions">
       <a class="cta" href="mailto:contact@seitzformation.fr?subject=Demande%20de%20contact%20-%20Seitz%20Formation">Écrire à contact@seitzformation.fr <span class="arrow">→</span></a>
-      <a class="cta secondary" href="plaquette-2026-2027.pdf" target="_blank">📄 Plaquette 2026-2027 (PDF) <span class="arrow">→</span></a>
+      <a class="cta secondary" href="plaquette-2026-2027.pdf" target="_blank" rel="noopener">📄 Plaquette 2026-2027 (PDF) <span class="arrow">→</span></a>
     </div>
   </section>
 
@@ -503,12 +540,30 @@
   <footer>
     <div class="footer-row">
       <span>SEITZ FORMATION — EURL au capital de 500 €</span>
-      <span>SIREN : 108720871 — NDA : 28140495014</span>
+      <span>SIREN 108 720 871</span>
     </div>
+    <p class="footer-nda">Organisme de formation enregistré sous le numéro 28140495014 auprès du préfet de région Normandie. Cet enregistrement ne vaut pas agrément de l'État.</p>
     <div class="footer-row" style="color: var(--chalk-dim); opacity: 0.8;">
       <span>Formateur indépendant · Mathématiques &amp; Sciences Physiques · Tourville-sur-Odon (14210)</span>
       <span>© 2026 Seitz Formation</span>
     </div>
+    <details class="legal" id="mentions-legales">
+      <summary>Mentions légales</summary>
+      <dl>
+        <dt>Éditeur</dt>
+        <dd>SEITZ FORMATION, EURL au capital de 500 €<br>Siège social : 3 allée du Pressoir, 14210 Tourville-sur-Odon<br>SIREN 108 720 871 — RCS Caen<br>Tél. 06 30 14 30 83 — <a href="mailto:contact@seitzformation.fr">contact@seitzformation.fr</a></dd>
+        <dt>Directeur de la publication</dt>
+        <dd>Thomas Seitz, gérant</dd>
+        <dt>Déclaration d'activité</dt>
+        <dd>Organisme de formation enregistré sous le numéro 28140495014 auprès du préfet de région Normandie. Cet enregistrement ne vaut pas agrément de l'État.</dd>
+        <dt>Hébergement</dt>
+        <dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — +1 415 857 5430</dd>
+        <dt>Données personnelles</dt>
+        <dd>Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. Les informations que vous envoyez par e-mail servent uniquement à répondre à votre demande et ne sont jamais transmises à des tiers. Vous pouvez demander à les consulter, les rectifier ou les supprimer en écrivant à <a href="mailto:contact@seitzformation.fr">contact@seitzformation.fr</a>, et introduire une réclamation auprès de la CNIL.</dd>
+        <dt>Propriété intellectuelle</dt>
+        <dd>Les textes et documents de ce site, dont la plaquette, appartiennent à SEITZ FORMATION. Toute reproduction nécessite son accord préalable.</dd>
+      </dl>
+    </details>
   </footer>
 
 </main>
