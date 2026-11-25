@@ -361,6 +361,18 @@
     .legal dd{margin-bottom:10px;}
   }
 </style>
+<style id="menu-commun">
+  /* menu identique sur toutes les pages (25/11/2026) */
+  .topnav .brand{color:var(--chalk); font-weight:600; text-decoration:none;}
+  .topnav-links{align-items:center;}
+  .topnav-links a[aria-current="page"]{color:var(--amber);}
+  .topnav-links a.nav-cta{color:#1a1305; background:var(--amber); padding:6px 12px;}
+  .topnav-links a.nav-cta:hover{color:#1a1305; filter:brightness(1.08);}
+  @media (max-width:720px){
+    .topnav-links{flex-wrap:wrap; overflow:visible; gap:8px 16px;}
+    section{scroll-margin-top:128px;}
+  }
+</style>
 </head>
 <body>
 
@@ -370,17 +382,14 @@
 
   <!-- NAVIGATION -->
   <header class="topnav">
-    <span class="brand">SEITZ FORMATION</span>
-    <nav class="topnav-links">
-      <a href="#expertise">Expertise</a>
-      <a href="#offre">Offre</a>
-      <a href="#programme">Programme</a>
-      <a href="exercices.html">Exercices</a>
-      <a href="cours-defauts-cristallins.html">Cours</a>
-      <a href="videos">Vidéos</a>
-      <a href="boutique">Boutique</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+    <a class="brand" href="/">SEITZ FORMATION</a>
+    <nav class="topnav-links" aria-label="Menu principal">
+      <a href="/#offre">Formations</a>
+      <a href="/exercices.html">Exercices</a>
+      <a href="/cours-defauts-cristallins.html">Cours</a>
+      <a href="/videos">Vidéos</a>
+      <a href="/boutique">Boutique</a>
+      <a class="nav-cta" href="/#contact">Contact</a>
     </nav>
   </header>
 

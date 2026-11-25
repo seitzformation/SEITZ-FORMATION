@@ -418,6 +418,46 @@ table.code-table td{padding:3px 10px; border-bottom:1px solid #D7DAE0; backgroun
 </style>
 </head>
 <body>
+<!-- bandeau-site -->
+<style>
+@font-face{font-family:'SF Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2');}
+@font-face{font-family:'SF Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');}
+.site-bar{position:fixed; top:0; left:0; right:0; z-index:50; min-height:48px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 18px;
+  padding:8px 4vw; background:#0b1f33; border-bottom:1px solid rgba(169,188,205,.18);
+  font:400 12px/1.2 'SF Plex Mono','IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.08em;}
+.site-bar a{color:#a9bccd; text-decoration:none; transition:color .15s;}
+.site-bar a:hover{color:#f2b705;}
+.site-bar .sb-brand{color:#f4f2e9; font-weight:500;}
+.site-bar nav{display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px;}
+.site-bar nav a[aria-current="page"]{color:#f2b705;}
+.site-bar nav a.nav-cta{color:#1a1305; background:#f2b705; padding:6px 12px;}
+.site-bar nav a.nav-cta:hover{color:#1a1305; filter:brightness(1.08);}
+.deck{position:fixed; top:var(--sb-h,49px); left:0; right:0; bottom:0; width:auto; height:auto;}
+</style>
+<header class="site-bar" id="site-bar">
+  <a class="sb-brand" href="/">SEITZ FORMATION</a>
+  <nav aria-label="Menu principal">
+    <a href="/#offre">Formations</a>
+    <a href="/exercices.html">Exercices</a>
+    <a href="/cours-defauts-cristallins.html" aria-current="page">Cours</a>
+    <a href="/videos">Vidéos</a>
+    <a href="/boutique">Boutique</a>
+    <a class="nav-cta" href="/#contact">Contact</a>
+  </nav>
+</header>
+<script>
+(function(){
+  var bar = document.getElementById('site-bar'), h = 0;
+  bar.addEventListener('click', function(e){ e.stopPropagation(); });   // un clic sur le bandeau n'avance pas les diapos
+  function caler(){
+    var n = bar.offsetHeight;
+    if (n !== h){ h = n; document.documentElement.style.setProperty('--sb-h', n + 'px'); window.dispatchEvent(new Event('resize')); }
+  }
+  caler(); window.addEventListener('resize', caler);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(caler);
+})();
+</script>
+<!-- /bandeau-site -->
 <div class="deck">
 
 <section class="slide active" data-kind="title">
