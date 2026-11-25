@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidéos de physique-chimie pour les BTS industriels | SEITZ FORMATION</title>
+<meta name="description" content="131 vidéos courtes de physique-chimie pour les BTS industriels (CRCI, CPRP, CICN, CPI, MS, ATI…) : une notion par vidéo, classées par partie et par chapitre, comme dans le livre.">
+<link rel="canonical" href="https://seitzformation.fr/videos">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SEITZ FORMATION">
+<meta property="og:title" content="Vidéos de physique-chimie pour les BTS industriels | SEITZ FORMATION">
+<meta property="og:description" content="131 vidéos courtes de physique-chimie pour les BTS industriels (CRCI, CPRP, CICN, CPI, MS, ATI…) : une notion par vidéo, classées par partie et par chapitre, comme dans le livre.">
+<meta property="og:url" content="https://seitzformation.fr/videos">
+<meta property="og:image" content="https://seitzformation.fr/og-image.png">
+<link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Polices hébergées sur le site (aucun appel à des serveurs tiers) — licence SIL OFL 1.1 */
+  @font-face{font-family:'Space Grotesk'; font-style:normal; font-weight:600; font-display:swap; src:url(fonts/space-grotesk-latin-600-normal.woff2) format('woff2');}
+  @font-face{font-family:'Space Grotesk'; font-style:normal; font-weight:700; font-display:swap; src:url(fonts/space-grotesk-latin-700-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Sans'; font-style:normal; font-weight:400; font-display:swap; src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Sans'; font-style:normal; font-weight:600; font-display:swap; src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Mono'; font-style:normal; font-weight:400; font-display:swap; src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Mono'; font-style:normal; font-weight:500; font-display:swap; src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');}
+  :root{
+    --navy-deep:#0b1f33;
+    --navy-panel:#122c47;
+    --navy-line: rgba(226,232,240,0.09);
+    --chalk:#f4f2e9;
+    --chalk-dim:#a9bccd;
+    --amber:#f2b705;
+    --amber-dim:#c99a1f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--navy-deep);
+    color:var(--chalk);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  
+  .grid-overlay{
+    position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      repeating-linear-gradient(0deg, var(--navy-line) 0 1px, transparent 1px 48px),
+      repeating-linear-gradient(90deg, var(--navy-line) 0 1px, transparent 1px 48px);
+    opacity:0.7;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px; position:relative; z-index:1;}
+
+  /* TOP NAV */
+  .topnav{
+    display:flex; justify-content:space-between; align-items:center;
+    position:sticky; top:0; z-index:5;
+    background:rgba(11,31,51,0.97); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+    padding:20px 0; border-bottom:1px solid var(--navy-line);
+    font-family:'IBM Plex Mono', monospace; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em;
+  }
+  .topnav .brand{color:var(--amber); font-weight:600;}
+  .topnav-links{display:flex; gap:18px; flex-wrap:wrap;}
+  .topnav-links a{color:var(--chalk-dim); transition:color .15s;}
+  .topnav-links a:hover{color:var(--amber);}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--amber);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px; background:var(--amber);
+    display:inline-block;
+  }
+
+  section{
+    position:relative;
+    scroll-margin-top:64px;
+    padding:88px 0 64px;
+    border-bottom:1px solid var(--navy-line);
+  }
+  section:last-of-type{border-bottom:none;}
+
+  /* HERO */
+  .hero{padding-top:70px;}
+  .hero h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(2.6rem, 7vw, 4.6rem);
+    letter-spacing:-0.01em;
+    line-height:0.98;
+  }
+  .hero .sub{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--chalk-dim);
+    font-size:clamp(0.95rem, 2vw, 1.15rem);
+    margin-top:18px;
+    letter-spacing:0.02em;
+  }
+  .hero p.lead{
+    max-width:52ch;
+    margin-top:26px;
+    font-size:1.08rem;
+    color:#dbe4ec;
+  }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    align-items:center;
+    margin-top:38px;
+  }
+  .cta{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 22px;
+    background:var(--amber);
+    color:#1a1305;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:500;
+    font-size:0.92rem;
+    border:1px solid var(--amber);
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+  }
+  .cta:hover{background:transparent; color:var(--amber);}
+  .cta.secondary{
+    background:var(--navy-panel);
+    color:var(--chalk);
+    border:1px solid rgba(242, 183, 5, 0.3);
+  }
+  .cta.secondary:hover{
+    border-color:var(--amber);
+    color:var(--amber);
+    background:rgba(242, 183, 5, 0.08);
+  }
+  .cta:focus-visible, a:focus-visible, button:focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:3px;
+  }
+  .cta .arrow{transition:transform .15s ease;}
+  .cta:hover .arrow{transform:translateX(3px);}
+
+  /* SPEC SHEET */
+  h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:clamp(1.6rem, 3.4vw, 2.2rem);
+    margin-bottom:20px;
+  }
+  .specs{margin-top:34px; border-top:1px solid var(--navy-line);}
+  .spec-row{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:24px;
+    padding:18px 0;
+    border-bottom:1px solid var(--navy-line);
+  }
+  .spec-row .k{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    color:var(--amber);
+    text-transform:uppercase;
+    padding-top:2px;
+  }
+  .spec-row .v{font-size:1rem; color:#e7edf2;}
+  .lead-p{max-width:62ch; color:#c9d5df; margin-top:28px;}
+  .who{display:flex; align-items:center; gap:22px; margin-bottom:6px;}
+  .who img{width:96px; height:auto; flex:none;}
+  .who h2{margin-bottom:0;}
+  .text-link{display:inline-block; margin-top:16px; font-family:'IBM Plex Mono', monospace; font-size:0.85rem; color:var(--amber); border-bottom:1px solid rgba(242,183,5,.4);}
+  .text-link:hover{border-color:var(--amber);}
+  .contact-alt{display:flex; flex-wrap:wrap; gap:12px 28px; align-items:center; margin-top:26px; font-family:'IBM Plex Mono', monospace; font-size:0.9rem; color:var(--chalk-dim);}
+  .contact-alt a{color:var(--chalk); border-bottom:1px solid rgba(242,183,5,.4);}
+  .contact-alt a:hover{color:var(--amber);}
+  .copy-btn{font:inherit; font-size:0.8rem; color:var(--chalk); background:var(--navy-panel); border:1px solid rgba(242,183,5,.3); padding:7px 12px; cursor:pointer;}
+  .copy-btn:hover{border-color:var(--amber); color:var(--amber);}
+
+
+  /* RESSOURCES (cours en PDF) */
+  .product{margin-top:36px; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:32px; align-items:center; border:1px solid var(--navy-line); background:var(--navy-panel); padding:26px;}
+  .product img{width:100%; height:auto; display:block; border:1px solid var(--navy-line);}
+  .product .tag{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--amber); letter-spacing:0.1em; text-transform:uppercase;}
+  .product h3{font-family:'Space Grotesk', sans-serif; font-size:1.35rem; font-weight:600; margin:8px 0 10px;}
+  .product p{color:#c9d5df; font-size:0.96rem;}
+  .product ul{list-style:none; margin:14px 0 0;}
+  .product li{font-size:0.92rem; color:#dbe4ec; padding:4px 0;}
+  .product li::before{content:"→ "; color:var(--amber);}
+  .product .price{font-family:'Space Grotesk', sans-serif; font-size:1.6rem; font-weight:700; margin-top:18px;}
+  .product .price small{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--chalk-dim); font-weight:400; margin-left:8px;}
+  .product .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
+  @media (max-width:720px){.product{grid-template-columns:1fr;}}
+
+  /* OFFRES / PROGRAMME / FAQ */
+  .offer-grid{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1px;
+    background:var(--navy-line);
+    border:1px solid var(--navy-line);
+  }
+  .offer-item{
+    background:var(--navy-deep);
+    padding:26px 28px;
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:20px;
+    align-items:start;
+  }
+  .offer-item .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--chalk-dim);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding-top:3px;
+  }
+  .offer-item h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.15rem;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .offer-item p{color:#c9d5df; font-size:0.96rem; max-width:52ch;}
+
+  /* FAQ */
+  .faq-item{
+    background:var(--navy-deep);
+    padding:26px 28px;
+  }
+  .faq-item h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.1rem;
+    color:var(--chalk);
+    margin-bottom:8px;
+  }
+  .faq-item p{color:#c9d5df; font-size:0.95rem; max-width:56ch;}
+
+  /* ZONE D'INTERVENTION */
+  .zone-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin-top:30px;
+  }
+  .zone-text p{color:#c9d5df; max-width:44ch;}
+  .zone-text ul{margin-top:18px; list-style:none;}
+  .zone-text li{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.85rem;
+    color:var(--chalk-dim);
+    padding:7px 0;
+    border-top:1px solid var(--navy-line);
+  }
+  .zone-text li:last-child{border-bottom:1px solid var(--navy-line);}
+  .zone-text li span{color:var(--amber); margin-right:10px;}
+  .compass-wrap{display:flex; justify-content:center;}
+  .compass-wrap svg{width:100%; max-width:340px; height:auto;}
+  .arc{
+    stroke-dasharray:1000;
+    stroke-dashoffset:1000;
+    animation:draw 1.8s ease forwards;
+  }
+  .arc.a2{animation-delay:.25s;}
+  .arc.a3{animation-delay:.5s;}
+  .pin{
+    opacity:0;
+    animation:fadein .6s ease forwards;
+    animation-delay:1.4s;
+  }
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @keyframes fadein{to{opacity:1;}}
+  @media (prefers-reduced-motion: reduce){
+    .arc{animation:none; stroke-dashoffset:0;}
+    .pin{animation:none; opacity:1;}
+  }
+
+  /* CONTACT BLOCK */
+  .contact-block{
+    margin-top:34px;
+    border:1px solid var(--navy-line);
+    padding:44px 36px;
+  }
+  .contact-email{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:clamp(1.3rem, 3.6vw, 1.9rem);
+    display:inline-block;
+    margin-top:12px;
+    border-bottom:2px solid var(--amber);
+    padding-bottom:2px;
+  }
+
+  /* FOOTER */
+  footer{
+    padding:40px 0 60px;
+    border-top:1px solid var(--navy-line);
+    margin-top:40px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--chalk-dim);
+    letter-spacing:0.04em;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .footer-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+  }
+  .footer-nda{color:var(--chalk); opacity:.85; line-height:1.6;}
+  .legal{border-top:1px solid var(--navy-line); padding-top:12px;}
+  .legal summary{cursor:pointer; color:var(--chalk); width:max-content; list-style:none;}
+  .legal summary::-webkit-details-marker{display:none;}
+  .legal summary::before{content:"+"; color:var(--amber); display:inline-block; width:1.2em;}
+  .legal[open] summary::before{content:"−";}
+  .legal summary:hover{color:var(--amber);}
+  .legal dl{display:grid; grid-template-columns:200px 1fr; gap:10px 24px; margin-top:16px; line-height:1.6;}
+  .legal dt{color:var(--amber); text-transform:uppercase; letter-spacing:0.1em;}
+  .legal dd{color:#c9d5df; font-family:'IBM Plex Sans', sans-serif; font-size:0.82rem; letter-spacing:0;}
+  .legal a{border-bottom:1px solid rgba(242,183,5,.4);}
+  .legal a:hover{color:var(--amber);}
+
+  @media (max-width:720px){
+    .topnav{flex-direction:column; align-items:flex-start; gap:10px; padding:14px 0 12px;}
+    .topnav-links{flex-wrap:nowrap; overflow-x:auto; gap:16px; width:100%; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+    .topnav-links::-webkit-scrollbar{display:none;}
+    .topnav-links a{white-space:nowrap; padding:4px 0;}
+    section{scroll-margin-top:96px;}
+    .who img{width:76px;}
+    .spec-row{grid-template-columns:1fr; gap:6px;}
+    .offer-item{grid-template-columns:1fr; gap:8px;}
+    .zone-layout{grid-template-columns:1fr; gap:20px;}
+    .compass-wrap{order:-1;}
+    .legal dl{grid-template-columns:1fr; gap:4px;}
+    .legal dd{margin-bottom:10px;}
+  }
+
+  /* PAGE VIDÉOS */
+  .stats{display:flex; flex-wrap:wrap; gap:10px 28px; margin-top:26px; font-family:'IBM Plex Mono', monospace; font-size:0.85rem; color:var(--chalk-dim);}
+  .stats b{color:var(--amber); font-weight:500;}
+  .note-yt{margin-top:18px; font-size:0.85rem; color:var(--chalk-dim); max-width:62ch;}
+  .book{margin-top:34px; border:1px solid rgba(242,183,5,.3); background:var(--navy-panel); padding:20px 24px; max-width:720px;}
+  .book .tag{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--amber); letter-spacing:0.1em; text-transform:uppercase;}
+  .book p{color:#dbe4ec; margin-top:6px; font-size:0.96rem;}
+  .parts{margin-top:30px; display:grid; gap:1px; background:var(--navy-line); border:1px solid var(--navy-line);}
+  .part{background:var(--navy-deep);}
+  .part-head{display:grid; grid-template-columns:96px 1fr 22px; grid-template-areas:"num title chev" "num meta chev"; gap:4px 18px; padding:20px 24px; align-items:center; cursor:pointer; list-style:none;}
+  .part-head::-webkit-details-marker{display:none;}
+  .pnum{grid-area:num; font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--amber);}
+  .ptitle{grid-area:title; font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:1.2rem; color:var(--chalk);}
+  .pmeta{grid-area:meta; font-family:'IBM Plex Mono', monospace; font-size:0.75rem; color:var(--chalk-dim);}
+  .chev{grid-area:chev; width:10px; height:10px; border-right:2px solid var(--amber); border-bottom:2px solid var(--amber); transform:rotate(45deg); transition:transform .2s ease; justify-self:end;}
+  details[open] > .part-head .chev{transform:rotate(-135deg);}
+  summary.part-head:hover .ptitle{color:var(--amber);}
+  .part.soon .part-head{cursor:default; grid-template-columns:96px 1fr;}
+  .part.soon .ptitle{color:var(--chalk-dim);}
+  .part.soon .pnum{color:var(--amber-dim);}
+  .part-body{padding:4px 24px 26px 138px;}
+  .cta.small{padding:10px 16px; font-size:0.82rem;}
+  .chap{margin-top:22px;}
+  .chap h3{font-family:'Space Grotesk', sans-serif; font-size:1.02rem; font-weight:600; color:var(--chalk); margin-bottom:8px;}
+  .clab{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--amber); margin-right:8px;}
+  .vids{list-style:none; border-top:1px solid var(--navy-line);}
+  .vids li{border-bottom:1px solid var(--navy-line);}
+  .vids a{display:grid; grid-template-columns:34px 1fr auto; gap:12px; padding:9px 4px; align-items:baseline; transition:background .15s, color .15s;}
+  .vids a:hover{background:rgba(242,183,5,0.06); color:var(--amber);}
+  .vn{font-family:'IBM Plex Mono', monospace; font-size:0.75rem; color:var(--chalk-dim);}
+  .vt{font-size:0.95rem;}
+  .vd{font-family:'IBM Plex Mono', monospace; font-size:0.75rem; color:var(--chalk-dim);}
+  @media (max-width:720px){
+    .part-head{grid-template-columns:1fr 18px; grid-template-areas:"num chev" "title chev" "meta chev"; padding:18px 16px;}
+    .part.soon .part-head{grid-template-columns:1fr; grid-template-areas:"num" "title" "meta";}
+    .part-body{padding:0 16px 22px;}
+  }
+</style>
+</head>
+<body>
+<div class="grid-overlay" aria-hidden="true"></div>
+<main class="wrap">
+  <header class="topnav">
+    <a class="brand" href="/" style="text-decoration:none;color:inherit">SEITZ FORMATION</a>
+    <nav class="topnav-links">
+      <a href="/#expertise">Expertise</a>
+      <a href="/#offre">Offre</a>
+      <a href="exercices.html">Exercices</a>
+      <a href="videos" aria-current="page" style="color:var(--amber)">Vidéos</a>
+      <a href="/#ressources">Cours PDF</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Vidéos · Physique-chimie · BTS industriels</p>
+    <h1 style="font-size:clamp(2.2rem,6vw,3.6rem)">Les vidéos du cours</h1>
+    <p class="lead">Une notion par vidéo, en deux ou trois minutes, avec une application à faire soi-même. Elles suivent le cours de physique-chimie des BTS industriels, partie par partie, chapitre par chapitre.</p>
+    <div class="stats"><span><b>131</b> vidéos</span><span><b>7</b> parties en ligne</span><span><b>5 h 14</b> au total</span></div>
+    <div class="hero-actions">
+      <a class="cta" href="https://www.youtube.com/@seitzformation" target="_blank" rel="noopener">La chaîne YouTube <span class="arrow">→</span></a>
+      <a class="cta secondary" href="exercices.html">Exercices auto-corrigés <span class="arrow">→</span></a>
+    </div>
+    <div class="book">
+      <div class="tag">Vous venez du livre ?</div>
+      <p>Les parties et les numéros de chapitres sont ceux du livre <i>Physique-chimie pour les BTS industriels</i>. Ouvrez une partie, puis cliquez sur une vidéo.</p>
+    </div>
+    <p class="note-yt">Les vidéos s'ouvrent sur YouTube, dans un nouvel onglet. Cette page ne charge rien depuis YouTube et ne dépose aucun cookie.</p>
+  </section>
+
+  <section style="padding-top:40px">
+    <p class="eyebrow">Les parties</p>
+    <div class="parts">
+    <details class="part" id="partie-1">
+      <summary class="part-head"><span class="pnum">Partie 1</span>
+        <span class="ptitle">Atome et liaisons</span>
+        <span class="pmeta">17 vidéos · 48 min · ch. 1 · ch. 2 · ch. 3</span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="part-body">
+        <a class="cta secondary small" href="https://www.youtube.com/playlist?list=PLQrZZ3sznVUI" target="_blank" rel="noopener">Regarder toute la partie sur YouTube <span class="arrow">→</span></a>
+        <div class="chap"><h3><span class="clab">Chapitre 1</span> L&#x27;atome et la classification périodique</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=DjoxC8-T_Bc&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">01</span><span class="vt">L&#x27;atome : un noyau et des électrons</span><span class="vd">3:15</span></a></li><li><a href="https://www.youtube.com/watch?v=pFgJjgtT-jY&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">02</span><span class="vt">Élément, isotopes, ions</span><span class="vd">2:51</span></a></li><li><a href="https://www.youtube.com/watch?v=6gt4WfW-Iic&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">03</span><span class="vt">La configuration électronique</span><span class="vd">3:09</span></a></li><li><a href="https://www.youtube.com/watch?v=S99mwVmP5W4&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">04</span><span class="vt">Décrire un atome, prévoir son ion</span><span class="vd">3:07</span></a></li><li><a href="https://www.youtube.com/watch?v=nf5s0ritREM&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">05</span><span class="vt">La classification périodique</span><span class="vd">2:45</span></a></li><li><a href="https://www.youtube.com/watch?v=om72hLqIed0&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">06</span><span class="vt">Niveaux d&#x27;énergie et lumière</span><span class="vd">2:08</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 2</span> Molécules et ions : Lewis, géométrie, polarité</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=HZIuDzN_O2I&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">07</span><span class="vt">Le schéma de Lewis d&#x27;un atome</span><span class="vd">2:05</span></a></li><li><a href="https://www.youtube.com/watch?v=Yr9sJMmy7cA&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">08</span><span class="vt">La liaison covalente</span><span class="vd">3:20</span></a></li><li><a href="https://www.youtube.com/watch?v=msrFrEJvunM&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">09</span><span class="vt">La géométrie des molécules</span><span class="vd">2:45</span></a></li><li><a href="https://www.youtube.com/watch?v=Y_31_smLS_Y&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">10</span><span class="vt">Électronégativité et polarité</span><span class="vd">2:33</span></a></li><li><a href="https://www.youtube.com/watch?v=ll1pxO1aKY4&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">11</span><span class="vt">La polarité d&#x27;une molécule</span><span class="vd">2:42</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 3</span> Cohésion de la matière</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=mpVlFYBcR7w&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">12</span><span class="vt">La cohésion de la matière</span><span class="vd">3:05</span></a></li><li><a href="https://www.youtube.com/watch?v=yLiGHu6ZQPc&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">13</span><span class="vt">La liaison métallique</span><span class="vd">3:07</span></a></li><li><a href="https://www.youtube.com/watch?v=uJPNGfxlEoo&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">14</span><span class="vt">Entre les molécules</span><span class="vd">2:26</span></a></li><li><a href="https://www.youtube.com/watch?v=peKPnoBfbeI&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">15</span><span class="vt">Températures d&#x27;ébullition</span><span class="vd">3:20</span></a></li><li><a href="https://www.youtube.com/watch?v=4HTX0wevGzQ&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">16</span><span class="vt">L&#x27;eau, solvant</span><span class="vd">2:41</span></a></li><li><a href="https://www.youtube.com/watch?v=lBEw-enHR0E&amp;list=PLQrZZ3sznVUI" target="_blank" rel="noopener"><span class="vn">17</span><span class="vt">L&#x27;eau et l&#x27;huile</span><span class="vd">2:43</span></a></li></ol></div>
+      </div>
+    </details>
+    <details class="part" id="partie-2">
+      <summary class="part-head"><span class="pnum">Partie 2</span>
+        <span class="ptitle">Cristallographie</span>
+        <span class="pmeta">19 vidéos · 53 min · ch. 4 · ch. 5 · ch. 6 · C1</span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="part-body">
+        <a class="cta secondary small" href="https://www.youtube.com/playlist?list=PLMPYcZkRlCI4" target="_blank" rel="noopener">Regarder toute la partie sur YouTube <span class="arrow">→</span></a>
+        <div class="chap"><h3><span class="clab">Chapitre 4</span> Les réseaux cristallins</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=3c4XwV6Bwgg&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">01</span><span class="vt">Cristal, réseau, motif, maille</span><span class="vd">2:25</span></a></li><li><a href="https://www.youtube.com/watch?v=0BW58G4_gN8&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">02</span><span class="vt">La géométrie du cube</span><span class="vd">2:06</span></a></li><li><a href="https://www.youtube.com/watch?v=wFgUN5AQ9Tk&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">03</span><span class="vt">La multiplicité Z</span><span class="vd">2:50</span></a></li><li><a href="https://www.youtube.com/watch?v=FzCCdHdAbDw&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">04</span><span class="vt">Où les atomes se touchent-ils ?</span><span class="vd">3:23</span></a></li><li><a href="https://www.youtube.com/watch?v=Yn56KWEuPXY&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">05</span><span class="vt">Peser une maille</span><span class="vd">3:12</span></a></li><li><a href="https://www.youtube.com/watch?v=dGbeHtYTQgg&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">06</span><span class="vt">La compacité</span><span class="vd">2:41</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 5</span> Défauts cristallins et alliages</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=8fkQaLRiwEA&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">07</span><span class="vt">Défauts cristallins</span><span class="vd">2:15</span></a></li><li><a href="https://www.youtube.com/watch?v=pgh690p4TfI&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">08</span><span class="vt">Les dislocations</span><span class="vd">2:36</span></a></li><li><a href="https://www.youtube.com/watch?v=Obhr1MWWenc&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">09</span><span class="vt">Les défauts font les propriétés</span><span class="vd">2:24</span></a></li><li><a href="https://www.youtube.com/watch?v=lAqN9nB_4RQ&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">10</span><span class="vt">Les alliages</span><span class="vd">2:53</span></a></li><li><a href="https://www.youtube.com/watch?v=CRaBwzIjeA0&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">11</span><span class="vt">Le carbone dans le fer</span><span class="vd">3:16</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 6</span> Changement d&#x27;état et diagrammes binaires</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=bs_6KUyyG9o&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">12</span><span class="vt">Fondre un métal</span><span class="vd">3:12</span></a></li><li><a href="https://www.youtube.com/watch?v=mmM5cCYUiHs&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">13</span><span class="vt">Chauffer puis fondre</span><span class="vd">2:57</span></a></li><li><a href="https://www.youtube.com/watch?v=0WxgBrdxSsQ&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">14</span><span class="vt">Les courbes de refroidissement</span><span class="vd">2:27</span></a></li><li><a href="https://www.youtube.com/watch?v=DxJMmOaKujQ&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">15</span><span class="vt">Le diagramme cuivre-nickel</span><span class="vd">3:20</span></a></li><li><a href="https://www.youtube.com/watch?v=4CD3JYglcG0&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">16</span><span class="vt">L&#x27;eutectique plomb-étain</span><span class="vd">3:00</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C1</span> La maille hexagonale compacte</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=0slqj8h9qoo&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">17</span><span class="vt">Deux empilements compacts</span><span class="vd">2:19</span></a></li><li><a href="https://www.youtube.com/watch?v=dCCIFddQt0g&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">18</span><span class="vt">La maille hexagonale</span><span class="vd">2:34</span></a></li><li><a href="https://www.youtube.com/watch?v=Vfwe2bx7rxM&amp;list=PLMPYcZkRlCI4" target="_blank" rel="noopener"><span class="vn">19</span><span class="vt">Les dimensions de la maille</span><span class="vd">3:27</span></a></li></ol></div>
+      </div>
+    </details>
+    <details class="part" id="partie-3">
+      <summary class="part-head"><span class="pnum">Partie 3</span>
+        <span class="ptitle">Matériaux</span>
+        <span class="pmeta">21 vidéos · 45 min · ch. 7 · ch. 8 · ch. 9 · C2</span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="part-body">
+        <a class="cta secondary small" href="https://www.youtube.com/playlist?list=PLRfttdmOREcY" target="_blank" rel="noopener">Regarder toute la partie sur YouTube <span class="arrow">→</span></a>
+        <div class="chap"><h3><span class="clab">Chapitre 7</span> Les céramiques</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=yBIqLHElnI8&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">01</span><span class="vt">Définition et classes</span><span class="vd">2:15</span></a></li><li><a href="https://www.youtube.com/watch?v=aafLgazMcy0&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">02</span><span class="vt">Liaisons et structure</span><span class="vd">2:35</span></a></li><li><a href="https://www.youtube.com/watch?v=zjjAD3ssklA&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">03</span><span class="vt">Rigides mais fragiles</span><span class="vd">2:46</span></a></li><li><a href="https://www.youtube.com/watch?v=YvF-gC0BADI&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">04</span><span class="vt">Propriétés des céramiques</span><span class="vd">2:24</span></a></li><li><a href="https://www.youtube.com/watch?v=ZuM8v-75MgI&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">05</span><span class="vt">Le frittage</span><span class="vd">2:46</span></a></li><li><a href="https://www.youtube.com/watch?v=Sf2X-OLfTyA&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">06</span><span class="vt">Usages, recyclage, béton armé</span><span class="vd">1:45</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 8</span> Les polymères</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=2JeqoHrbpbo&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">07</span><span class="vt">Le vocabulaire</span><span class="vd">1:36</span></a></li><li><a href="https://www.youtube.com/watch?v=ayUqAq4reus&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">08</span><span class="vt">Polymériser</span><span class="vd">2:08</span></a></li><li><a href="https://www.youtube.com/watch?v=Y2dymjjxdOI&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">09</span><span class="vt">Le degré de polymérisation</span><span class="vd">1:51</span></a></li><li><a href="https://www.youtube.com/watch?v=5A9GKTWSLg0&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">10</span><span class="vt">La formule d&#x27;un motif</span><span class="vd">2:08</span></a></li><li><a href="https://www.youtube.com/watch?v=Zqb-mSZq95Y&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">11</span><span class="vt">Structure et familles</span><span class="vd">2:04</span></a></li><li><a href="https://www.youtube.com/watch?v=kZnnrozEYx0&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">12</span><span class="vt">Transition vitreuse</span><span class="vd">2:31</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 9</span> Vieillissement et recyclage des polymères</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=ruK8gqWUbFc&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">13</span><span class="vt">Le vieillissement</span><span class="vd">1:47</span></a></li><li><a href="https://www.youtube.com/watch?v=DHt4Q1wdv7w&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">14</span><span class="vt">Retraiter, identifier</span><span class="vd">1:35</span></a></li><li><a href="https://www.youtube.com/watch?v=yTaXnFMOyik&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">15</span><span class="vt">Trier par flottation</span><span class="vd">1:57</span></a></li><li><a href="https://www.youtube.com/watch?v=Hq6BfnzEafU&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">16</span><span class="vt">Les filières</span><span class="vd">1:55</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C2</span> Matériaux composites</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=V4F-QnBKToE&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">17</span><span class="vt">Les composites</span><span class="vd">1:44</span></a></li><li><a href="https://www.youtube.com/watch?v=kX3gqEwDB_E&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">18</span><span class="vt">La loi des mélanges</span><span class="vd">2:24</span></a></li><li><a href="https://www.youtube.com/watch?v=REIGoYktJsQ&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">19</span><span class="vt">Rigide et léger ?</span><span class="vd">2:18</span></a></li><li><a href="https://www.youtube.com/watch?v=b6lcmcRVfek&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">20</span><span class="vt">Le stratifié</span><span class="vd">1:50</span></a></li><li><a href="https://www.youtube.com/watch?v=1-ZZ0orgPFI&amp;list=PLRfttdmOREcY" target="_blank" rel="noopener"><span class="vn">21</span><span class="vt">Le panneau sandwich</span><span class="vd">2:32</span></a></li></ol></div>
+      </div>
+    </details>
+    <details class="part" id="partie-4">
+      <summary class="part-head"><span class="pnum">Partie 4</span>
+        <span class="ptitle">Mécanique des fluides</span>
+        <span class="pmeta">23 vidéos · 53 min · ch. 10 · ch. 11 · ch. 12 · ch. 13</span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="part-body">
+        <a class="cta secondary small" href="https://www.youtube.com/playlist?list=PLK5P5RfgXbYM" target="_blank" rel="noopener">Regarder toute la partie sur YouTube <span class="arrow">→</span></a>
+        <div class="chap"><h3><span class="clab">Chapitre 10</span> Pression et hydrostatique</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=WgEAKNMq2a0&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">01</span><span class="vt">La pression</span><span class="vd">2:15</span></a></li><li><a href="https://www.youtube.com/watch?v=Yw08jBJF0Nc&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">02</span><span class="vt">Absolue ou relative ?</span><span class="vd">2:19</span></a></li><li><a href="https://www.youtube.com/watch?v=2M812Q2MI_4&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">03</span><span class="vt">L&#x27;hydrostatique</span><span class="vd">2:27</span></a></li><li><a href="https://www.youtube.com/watch?v=DN-T6NXWQWQ&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">04</span><span class="vt">La force sur le fond</span><span class="vd">1:19</span></a></li><li><a href="https://www.youtube.com/watch?v=_527laCKkNw&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">05</span><span class="vt">Hauteur et masse volumique</span><span class="vd">1:57</span></a></li><li><a href="https://www.youtube.com/watch?v=jk8lbG0xE2U&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">06</span><span class="vt">La transmission</span><span class="vd">2:24</span></a></li><li><a href="https://www.youtube.com/watch?v=D8cUqZTaVjU&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">07</span><span class="vt">La tension superficielle</span><span class="vd">2:03</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 11</span> Débits et conservation du débit</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=mMMACsVfcCQ&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">08</span><span class="vt">Le débit volumique</span><span class="vd">2:15</span></a></li><li><a href="https://www.youtube.com/watch?v=kNThhlAHHJ8&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">09</span><span class="vt">Le débit massique</span><span class="vd">1:49</span></a></li><li><a href="https://www.youtube.com/watch?v=wHniqKiT9fc&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">10</span><span class="vt">La continuité</span><span class="vd">2:00</span></a></li><li><a href="https://www.youtube.com/watch?v=0KxbJe4fGiw&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">11</span><span class="vt">Nœuds et réservoirs</span><span class="vd">2:00</span></a></li><li><a href="https://www.youtube.com/watch?v=b5o53flrBGQ&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">12</span><span class="vt">Des vitesses raisonnables</span><span class="vd">1:38</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 12</span> Le théorème de Bernoulli</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=fX425EWfq7w&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">13</span><span class="vt">Bernoulli</span><span class="vd">2:33</span></a></li><li><a href="https://www.youtube.com/watch?v=Q257OmNfyp4&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">14</span><span class="vt">La méthode</span><span class="vd">2:39</span></a></li><li><a href="https://www.youtube.com/watch?v=MOmGuzUbCYE&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">15</span><span class="vt">La vidange</span><span class="vd">1:36</span></a></li><li><a href="https://www.youtube.com/watch?v=DHBx9qYeaD4&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">16</span><span class="vt">L&#x27;effet Venturi</span><span class="vd">2:24</span></a></li><li><a href="https://www.youtube.com/watch?v=wyPxubfAH70&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">17</span><span class="vt">La pompe</span><span class="vd">2:47</span></a></li></ol></div><div class="chap"><h3><span class="clab">Chapitre 13</span> Viscosité, Reynolds et pertes de charge</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=5e-1QyeMkss&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">18</span><span class="vt">La viscosité</span><span class="vd">3:05</span></a></li><li><a href="https://www.youtube.com/watch?v=ONAecqoOBI4&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">19</span><span class="vt">Laminaire ou turbulent ?</span><span class="vd">2:29</span></a></li><li><a href="https://www.youtube.com/watch?v=X6GWo5Ul7YQ&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">20</span><span class="vt">Les pertes de charge</span><span class="vd">3:08</span></a></li><li><a href="https://www.youtube.com/watch?v=6woRd_DSMPM&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">21</span><span class="vt">Coudes et vannes</span><span class="vd">2:54</span></a></li><li><a href="https://www.youtube.com/watch?v=sKqrZmSV-E4&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">22</span><span class="vt">La loi de Poiseuille</span><span class="vd">2:43</span></a></li><li><a href="https://www.youtube.com/watch?v=9pJlL-OPd_0&amp;list=PLK5P5RfgXbYM" target="_blank" rel="noopener"><span class="vn">23</span><span class="vt">Pompe et réseau</span><span class="vd">1:58</span></a></li></ol></div>
+      </div>
+    </details>
+    <details class="part" id="partie-5">
+      <summary class="part-head"><span class="pnum">Partie 5</span>
+        <span class="ptitle">Thermique et dilatation</span>
+        <span class="pmeta">17 vidéos · 37 min · ch. 14 · C3 · C4</span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="part-body">
+        <a class="cta secondary small" href="https://www.youtube.com/playlist?list=PLdjTvm_Bxt64" target="_blank" rel="noopener">Regarder toute la partie sur YouTube <span class="arrow">→</span></a>
+        <div class="chap"><h3><span class="clab">Chapitre 14</span> Calorimétrie et changements d&#x27;état</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=Hg4CeNQZqvo&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">01</span><span class="vt">Chaleur et température</span><span class="vd">2:09</span></a></li><li><a href="https://www.youtube.com/watch?v=7EGEPhVUJpw&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">02</span><span class="vt">Chauffer</span><span class="vd">2:00</span></a></li><li><a href="https://www.youtube.com/watch?v=5TsjL8URHL4&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">03</span><span class="vt">Changer d&#x27;état</span><span class="vd">2:30</span></a></li><li><a href="https://www.youtube.com/watch?v=UwfWRj-xLSk&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">04</span><span class="vt">Toute la courbe</span><span class="vd">2:14</span></a></li><li><a href="https://www.youtube.com/watch?v=-SkAa_HoPjo&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">05</span><span class="vt">Le bilan thermique</span><span class="vd">2:46</span></a></li><li><a href="https://www.youtube.com/watch?v=pOQBO49pzc4&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">06</span><span class="vt">Avec de la glace</span><span class="vd">1:52</span></a></li><li><a href="https://www.youtube.com/watch?v=uIubGDCw9po&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">07</span><span class="vt">Chauffer vite</span><span class="vd">2:42</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C3</span> Conduction, convection, résistance thermique</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=HFP6tHgGCRg&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">08</span><span class="vt">Le flux thermique</span><span class="vd">2:37</span></a></li><li><a href="https://www.youtube.com/watch?v=BRZhxf65ueU&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">09</span><span class="vt">Plusieurs couches</span><span class="vd">2:42</span></a></li><li><a href="https://www.youtube.com/watch?v=m73tkupsv7I&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">10</span><span class="vt">La convection</span><span class="vd">2:20</span></a></li><li><a href="https://www.youtube.com/watch?v=LZwsq__ugII&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">11</span><span class="vt">Entre deux fluides</span><span class="vd">1:55</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C4</span> Dilatation thermique</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=OY19TtLc1SY&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">12</span><span class="vt">La dilatation</span><span class="vd">1:58</span></a></li><li><a href="https://www.youtube.com/watch?v=Df4hUP1IAiU&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">13</span><span class="vt">Les coefficients α</span><span class="vd">1:54</span></a></li><li><a href="https://www.youtube.com/watch?v=qrwNIJ6oR8k&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">14</span><span class="vt">Le jeu de montage</span><span class="vd">1:36</span></a></li><li><a href="https://www.youtube.com/watch?v=Fnji5LxmmtY&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">15</span><span class="vt">Dilatation empêchée</span><span class="vd">2:29</span></a></li><li><a href="https://www.youtube.com/watch?v=cmaHdHnG6mA&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">16</span><span class="vt">Utile ou gênante</span><span class="vd">1:49</span></a></li><li><a href="https://www.youtube.com/watch?v=ZmWzxUm9hPE&amp;list=PLdjTvm_Bxt64" target="_blank" rel="noopener"><span class="vn">17</span><span class="vt">Deux applications</span><span class="vd">1:42</span></a></li></ol></div>
+      </div>
+    </details>
+    <details class="part" id="partie-6">
+      <summary class="part-head"><span class="pnum">Partie 6</span>
+        <span class="ptitle">Oxydoréduction et corrosion</span>
+        <span class="pmeta">16 vidéos · 38 min · C5 · C6 · C7</span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="part-body">
+        <a class="cta secondary small" href="https://www.youtube.com/playlist?list=PLBMje1zKWTec" target="_blank" rel="noopener">Regarder toute la partie sur YouTube <span class="arrow">→</span></a>
+        <div class="chap"><h3><span class="clab">Complément C5</span> Oxydoréduction</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=Nwiw0ynATRM&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">01</span><span class="vt">Oxydants et réducteurs</span><span class="vd">2:19</span></a></li><li><a href="https://www.youtube.com/watch?v=GP3iQa1P8TY&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">02</span><span class="vt">La demi-équation</span><span class="vd">2:40</span></a></li><li><a href="https://www.youtube.com/watch?v=Ryh_osX13UA&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">03</span><span class="vt">Le nombre d&#x27;oxydation</span><span class="vd">2:52</span></a></li><li><a href="https://www.youtube.com/watch?v=tKCC4wYn7fk&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">04</span><span class="vt">L&#x27;équation de réaction</span><span class="vd">2:22</span></a></li><li><a href="https://www.youtube.com/watch?v=jSOtBH0gSFI&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">05</span><span class="vt">Prévoir une réaction</span><span class="vd">3:04</span></a></li><li><a href="https://www.youtube.com/watch?v=RaanDn0gqpM&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">06</span><span class="vt">Métaux et acides</span><span class="vd">2:38</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C6</span> Corrosion et protection des métaux</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=4ortIMYc_hE&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">07</span><span class="vt">La pile de corrosion</span><span class="vd">2:09</span></a></li><li><a href="https://www.youtube.com/watch?v=i4RCLDCLWxU&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">08</span><span class="vt">Deux métaux en contact</span><span class="vd">2:09</span></a></li><li><a href="https://www.youtube.com/watch?v=EzKAc1zIk-Y&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">09</span><span class="vt">La passivation</span><span class="vd">1:38</span></a></li><li><a href="https://www.youtube.com/watch?v=PVUYETErv5g&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">10</span><span class="vt">Protéger un métal</span><span class="vd">2:40</span></a></li><li><a href="https://www.youtube.com/watch?v=cnBB237tZU0&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">11</span><span class="vt">Dépôt électrolytique</span><span class="vd">1:47</span></a></li><li><a href="https://www.youtube.com/watch?v=OOIQ9ySYhzA&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">12</span><span class="vt">Loi de Faraday</span><span class="vd">2:33</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C7</span> Piles et accumulateurs</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=Td_Rgt8oigE&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">13</span><span class="vt">La pile</span><span class="vd">2:24</span></a></li><li><a href="https://www.youtube.com/watch?v=gSVO6GpnLWA&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">14</span><span class="vt">Tension et capacité</span><span class="vd">2:30</span></a></li><li><a href="https://www.youtube.com/watch?v=IxkNKwNotpM&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">15</span><span class="vt">Piles et accumulateurs</span><span class="vd">2:37</span></a></li><li><a href="https://www.youtube.com/watch?v=jBA5QvS5aP0&amp;list=PLBMje1zKWTec" target="_blank" rel="noopener"><span class="vn">16</span><span class="vt">Pile à combustible</span><span class="vd">1:59</span></a></li></ol></div>
+      </div>
+    </details>
+    <details class="part" id="partie-7">
+      <summary class="part-head"><span class="pnum">Partie 7</span>
+        <span class="ptitle">Sécurité à l&#x27;atelier</span>
+        <span class="pmeta">18 vidéos · 39 min · C8 · C9 · C10 · C11</span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="part-body">
+        <a class="cta secondary small" href="https://www.youtube.com/playlist?list=PLRLtATnnfLi4" target="_blank" rel="noopener">Regarder toute la partie sur YouTube <span class="arrow">→</span></a>
+        <div class="chap"><h3><span class="clab">Complément C8</span> Le risque chimique à l&#x27;atelier</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=gtdu1yzvH70&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">01</span><span class="vt">Le risque chimique</span><span class="vd">2:22</span></a></li><li><a href="https://www.youtube.com/watch?v=a3IQers6DG8&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">02</span><span class="vt">L&#x27;étiquette</span><span class="vd">2:14</span></a></li><li><a href="https://www.youtube.com/watch?v=wG0nkNqbTR8&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">03</span><span class="vt">La FDS</span><span class="vd">2:10</span></a></li><li><a href="https://www.youtube.com/watch?v=vSRDRUgSNy0&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">04</span><span class="vt">Les VLEP</span><span class="vd">1:50</span></a></li><li><a href="https://www.youtube.com/watch?v=IGOh1dX9wIM&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">05</span><span class="vt">La ventilation</span><span class="vd">2:21</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C9</span> Les gaz de l&#x27;atelier</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=woxJ5OJw1UA&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">06</span><span class="vt">Les gaz de l&#x27;atelier</span><span class="vd">1:58</span></a></li><li><a href="https://www.youtube.com/watch?v=hcTQzNyBLcg&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">07</span><span class="vt">Inflammables, comburants</span><span class="vd">2:18</span></a></li><li><a href="https://www.youtube.com/watch?v=rRMWJYerCWk&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">08</span><span class="vt">Combien de gaz ?</span><span class="vd">2:31</span></a></li><li><a href="https://www.youtube.com/watch?v=Z8g76MLjpi4&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">09</span><span class="vt">Les gaz inertes</span><span class="vd">2:31</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C10</span> Les appareils sous pression</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=Kr85fC99TF0&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">10</span><span class="vt">Appareils sous pression</span><span class="vd">1:59</span></a></li><li><a href="https://www.youtube.com/watch?v=PIylGLdVBVk&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">11</span><span class="vt">Gaz ou liquide</span><span class="vd">2:43</span></a></li><li><a href="https://www.youtube.com/watch?v=alUaI56eZ9I&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">12</span><span class="vt">Épreuve et soupape</span><span class="vd">1:40</span></a></li><li><a href="https://www.youtube.com/watch?v=fDYZy4fik7k&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">13</span><span class="vt">Des forces énormes</span><span class="vd">2:25</span></a></li></ol></div><div class="chap"><h3><span class="clab">Complément C11</span> Le bruit à l&#x27;atelier</h3><ol class="vids"><li><a href="https://www.youtube.com/watch?v=i28o4g6uVhA&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">14</span><span class="vt">Le bruit à l&#x27;atelier</span><span class="vd">2:04</span></a></li><li><a href="https://www.youtube.com/watch?v=KCfg2-gsUIg&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">15</span><span class="vt">Les décibels</span><span class="vd">2:21</span></a></li><li><a href="https://www.youtube.com/watch?v=WLDHkmBhxQI&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">16</span><span class="vt">Le bruit de l&#x27;atelier</span><span class="vd">1:47</span></a></li><li><a href="https://www.youtube.com/watch?v=AYxImOxT08U&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">17</span><span class="vt">L&#x27;exposition au bruit</span><span class="vd">2:18</span></a></li><li><a href="https://www.youtube.com/watch?v=uQcrnsR3BdU&amp;list=PLRLtATnnfLi4" target="_blank" rel="noopener"><span class="vn">18</span><span class="vt">Se protéger</span><span class="vd">1:42</span></a></li></ol></div>
+      </div>
+    </details>
+    <div class="part soon">
+      <div class="part-head"><span class="pnum">Partie 8</span>
+        <span class="ptitle">Optique</span><span class="pmeta">Vidéos en préparation</span></div>
+    </div>
+    <div class="part soon">
+      <div class="part-head"><span class="pnum">Partie 9</span>
+        <span class="ptitle">Électricité</span><span class="pmeta">Vidéos en préparation</span></div>
+    </div>
+    <div class="part soon">
+      <div class="part-head"><span class="pnum">Partie 10</span>
+        <span class="ptitle">Vibrations</span><span class="pmeta">Vidéos en préparation</span></div>
+    </div>
+    <div class="part soon">
+      <div class="part-head"><span class="pnum">Fiches</span>
+        <span class="ptitle">Boîte à outils : fiches de méthode</span><span class="pmeta">Vidéos en préparation</span></div>
+    </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-row">
+      <span>SEITZ FORMATION — EURL au capital de 500 €</span>
+      <span>SIREN 108 720 871</span>
+    </div>
+    <p class="footer-nda">Organisme de formation enregistré sous le numéro 28140495014 auprès du préfet de région Normandie. Cet enregistrement ne vaut pas agrément de l'État.</p>
+    <div class="footer-row" style="color: var(--chalk-dim); opacity: 0.8;">
+      <span>Formateur indépendant · Mathématiques &amp; Sciences Physiques · Tourville-sur-Odon (14210)</span>
+      <span><a href="cgv.html" style="color:inherit">CGV</a> · © 2026 Seitz Formation</span>
+    </div>
+    <details class="legal" id="mentions-legales">
+      <summary>Mentions légales</summary>
+      <dl>
+        <dt>Éditeur</dt>
+        <dd>SEITZ FORMATION, EURL au capital de 500 €<br>Siège social : 3 allée du Pressoir, 14210 Tourville-sur-Odon<br>SIREN 108 720 871 — RCS Caen<br>Tél. 06 30 14 30 83 — <a href="mailto:contact@seitzformation.fr">contact@seitzformation.fr</a></dd>
+        <dt>Directeur de la publication</dt>
+        <dd>Thomas Seitz, gérant</dd>
+        <dt>Déclaration d'activité</dt>
+        <dd>Organisme de formation enregistré sous le numéro 28140495014 auprès du préfet de région Normandie. Cet enregistrement ne vaut pas agrément de l'État.</dd>
+        <dt>Hébergement</dt>
+        <dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — +1 415 857 5430</dd>
+        <dt>Données personnelles</dt>
+        <dd>Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. La plateforme Payhip, sur laquelle s'effectue l'achat des cours en PDF, peut déposer ses propres cookies lors de la commande, selon sa politique de confidentialité. Les informations que vous envoyez par e-mail servent uniquement à répondre à votre demande et ne sont jamais transmises à des tiers. L'assistant en ligne transmet les messages que vous y saisissez à Claude, service d'Anthropic établi aux États-Unis (transfert de données hors de l'Union européenne), uniquement pour générer une réponse ; aucune donnée n'est transmise tant que vous n'envoyez pas de message, ce site ne conserve pas ces échanges et n'utilise ni cookie ni stockage dans votre navigateur pour cela. Ne saisissez pas de données personnelles dans l'assistant. Vous pouvez demander à les consulter, les rectifier ou les supprimer en écrivant à <a href="mailto:contact@seitzformation.fr">contact@seitzformation.fr</a>, et introduire une réclamation auprès de la CNIL.</dd>
+        <dt>Vente en ligne</dt>
+        <dd>Les cours en PDF sont vendus via la plateforme Payhip, selon les <a href="cgv.html">conditions générales de vente</a>.</dd>
+        <dt>Propriété intellectuelle</dt>
+        <dd>Les textes et documents de ce site, dont la plaquette, appartiennent à SEITZ FORMATION. Toute reproduction nécessite son accord préalable.</dd>
+      </dl>
+    </details>
+  </footer>
+</main>
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-copy'), label = b.textContent;
+      var done = function () { b.textContent = 'Adresse copiée ✓'; setTimeout(function () { b.textContent = label; }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () { window.prompt('Adresse e-mail :', t); });
+      else window.prompt('Adresse e-mail :', t);
+    });
+  });
+</script>
+<script src="chat.js" defer></script>
+</body>
+</html>
