@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique : cours en PDF pour les BTS industriels | SEITZ FORMATION</title>
+<meta name="description" content="Cours en PDF pour les BTS industriels, avec tous les exercices corrigés : cotation fonctionnelle (BTS CRCI, CICN). Paiement sur Payhip, téléchargement immédiat.">
+<link rel="canonical" href="https://seitzformation.fr/boutique">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SEITZ FORMATION">
+<meta property="og:title" content="Boutique : cours en PDF pour les BTS industriels | SEITZ FORMATION">
+<meta property="og:description" content="Cours en PDF pour les BTS industriels, avec tous les exercices corrigés : cotation fonctionnelle (BTS CRCI, CICN). Paiement sur Payhip, téléchargement immédiat.">
+<meta property="og:url" content="https://seitzformation.fr/boutique">
+<meta property="og:image" content="https://seitzformation.fr/og-image.png">
+<link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Polices hébergées sur le site (aucun appel à des serveurs tiers) — licence SIL OFL 1.1 */
+  @font-face{font-family:'Space Grotesk'; font-style:normal; font-weight:600; font-display:swap; src:url(fonts/space-grotesk-latin-600-normal.woff2) format('woff2');}
+  @font-face{font-family:'Space Grotesk'; font-style:normal; font-weight:700; font-display:swap; src:url(fonts/space-grotesk-latin-700-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Sans'; font-style:normal; font-weight:400; font-display:swap; src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Sans'; font-style:normal; font-weight:600; font-display:swap; src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Mono'; font-style:normal; font-weight:400; font-display:swap; src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2');}
+  @font-face{font-family:'IBM Plex Mono'; font-style:normal; font-weight:500; font-display:swap; src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');}
+  :root{
+    --navy-deep:#0b1f33;
+    --navy-panel:#122c47;
+    --navy-line: rgba(226,232,240,0.09);
+    --chalk:#f4f2e9;
+    --chalk-dim:#a9bccd;
+    --amber:#f2b705;
+    --amber-dim:#c99a1f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--navy-deep);
+    color:var(--chalk);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  
+  .grid-overlay{
+    position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      repeating-linear-gradient(0deg, var(--navy-line) 0 1px, transparent 1px 48px),
+      repeating-linear-gradient(90deg, var(--navy-line) 0 1px, transparent 1px 48px);
+    opacity:0.7;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px; position:relative; z-index:1;}
+
+  /* TOP NAV */
+  .topnav{
+    display:flex; justify-content:space-between; align-items:center;
+    position:sticky; top:0; z-index:5;
+    background:rgba(11,31,51,0.97); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+    padding:20px 0; border-bottom:1px solid var(--navy-line);
+    font-family:'IBM Plex Mono', monospace; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em;
+  }
+  .topnav .brand{color:var(--amber); font-weight:600;}
+  .topnav-links{display:flex; gap:18px; flex-wrap:wrap;}
+  .topnav-links a{color:var(--chalk-dim); transition:color .15s;}
+  .topnav-links a:hover{color:var(--amber);}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--amber);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px; background:var(--amber);
+    display:inline-block;
+  }
+
+  section{
+    position:relative;
+    scroll-margin-top:64px;
+    padding:88px 0 64px;
+    border-bottom:1px solid var(--navy-line);
+  }
+  section:last-of-type{border-bottom:none;}
+
+  /* HERO */
+  .hero{padding-top:70px;}
+  .hero h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(2.6rem, 7vw, 4.6rem);
+    letter-spacing:-0.01em;
+    line-height:0.98;
+  }
+  .hero .sub{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--chalk-dim);
+    font-size:clamp(0.95rem, 2vw, 1.15rem);
+    margin-top:18px;
+    letter-spacing:0.02em;
+  }
+  .hero p.lead{
+    max-width:52ch;
+    margin-top:26px;
+    font-size:1.08rem;
+    color:#dbe4ec;
+  }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    align-items:center;
+    margin-top:38px;
+  }
+  .cta{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 22px;
+    background:var(--amber);
+    color:#1a1305;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:500;
+    font-size:0.92rem;
+    border:1px solid var(--amber);
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+  }
+  .cta:hover{background:transparent; color:var(--amber);}
+  .cta.secondary{
+    background:var(--navy-panel);
+    color:var(--chalk);
+    border:1px solid rgba(242, 183, 5, 0.3);
+  }
+  .cta.secondary:hover{
+    border-color:var(--amber);
+    color:var(--amber);
+    background:rgba(242, 183, 5, 0.08);
+  }
+  .cta:focus-visible, a:focus-visible, button:focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:3px;
+  }
+  .cta .arrow{transition:transform .15s ease;}
+  .cta:hover .arrow{transform:translateX(3px);}
+
+  /* SPEC SHEET */
+  h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:clamp(1.6rem, 3.4vw, 2.2rem);
+    margin-bottom:20px;
+  }
+  .specs{margin-top:34px; border-top:1px solid var(--navy-line);}
+  .spec-row{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:24px;
+    padding:18px 0;
+    border-bottom:1px solid var(--navy-line);
+  }
+  .spec-row .k{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    color:var(--amber);
+    text-transform:uppercase;
+    padding-top:2px;
+  }
+  .spec-row .v{font-size:1rem; color:#e7edf2;}
+  .lead-p{max-width:62ch; color:#c9d5df; margin-top:28px;}
+  .who{display:flex; align-items:center; gap:22px; margin-bottom:6px;}
+  .who img{width:96px; height:auto; flex:none;}
+  .who h2{margin-bottom:0;}
+  .text-link{display:inline-block; margin-top:16px; font-family:'IBM Plex Mono', monospace; font-size:0.85rem; color:var(--amber); border-bottom:1px solid rgba(242,183,5,.4);}
+  .text-link:hover{border-color:var(--amber);}
+  .contact-alt{display:flex; flex-wrap:wrap; gap:12px 28px; align-items:center; margin-top:26px; font-family:'IBM Plex Mono', monospace; font-size:0.9rem; color:var(--chalk-dim);}
+  .contact-alt a{color:var(--chalk); border-bottom:1px solid rgba(242,183,5,.4);}
+  .contact-alt a:hover{color:var(--amber);}
+  .copy-btn{font:inherit; font-size:0.8rem; color:var(--chalk); background:var(--navy-panel); border:1px solid rgba(242,183,5,.3); padding:7px 12px; cursor:pointer;}
+  .copy-btn:hover{border-color:var(--amber); color:var(--amber);}
+
+
+  /* RESSOURCES (cours en PDF) */
+  .product{margin-top:36px; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:32px; align-items:center; border:1px solid var(--navy-line); background:var(--navy-panel); padding:26px;}
+  .product img{width:100%; height:auto; display:block; border:1px solid var(--navy-line);}
+  .product .tag{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--amber); letter-spacing:0.1em; text-transform:uppercase;}
+  .product h3{font-family:'Space Grotesk', sans-serif; font-size:1.35rem; font-weight:600; margin:8px 0 10px;}
+  .product p{color:#c9d5df; font-size:0.96rem;}
+  .product ul{list-style:none; margin:14px 0 0;}
+  .product li{font-size:0.92rem; color:#dbe4ec; padding:4px 0;}
+  .product li::before{content:"→ "; color:var(--amber);}
+  .product .price{font-family:'Space Grotesk', sans-serif; font-size:1.6rem; font-weight:700; margin-top:18px;}
+  .product .price small{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--chalk-dim); font-weight:400; margin-left:8px;}
+  .product .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
+  @media (max-width:720px){.product{grid-template-columns:1fr;}}
+
+  /* OFFRES / PROGRAMME / FAQ */
+  .offer-grid{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1px;
+    background:var(--navy-line);
+    border:1px solid var(--navy-line);
+  }
+  .offer-item{
+    background:var(--navy-deep);
+    padding:26px 28px;
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:20px;
+    align-items:start;
+  }
+  .offer-item .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--chalk-dim);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding-top:3px;
+  }
+  .offer-item h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.15rem;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .offer-item p{color:#c9d5df; font-size:0.96rem; max-width:52ch;}
+
+  /* FAQ */
+  .faq-item{
+    background:var(--navy-deep);
+    padding:26px 28px;
+  }
+  .faq-item h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.1rem;
+    color:var(--chalk);
+    margin-bottom:8px;
+  }
+  .faq-item p{color:#c9d5df; font-size:0.95rem; max-width:56ch;}
+
+  /* ZONE D'INTERVENTION */
+  .zone-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin-top:30px;
+  }
+  .zone-text p{color:#c9d5df; max-width:44ch;}
+  .zone-text ul{margin-top:18px; list-style:none;}
+  .zone-text li{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.85rem;
+    color:var(--chalk-dim);
+    padding:7px 0;
+    border-top:1px solid var(--navy-line);
+  }
+  .zone-text li:last-child{border-bottom:1px solid var(--navy-line);}
+  .zone-text li span{color:var(--amber); margin-right:10px;}
+  .compass-wrap{display:flex; justify-content:center;}
+  .compass-wrap svg{width:100%; max-width:340px; height:auto;}
+  .arc{
+    stroke-dasharray:1000;
+    stroke-dashoffset:1000;
+    animation:draw 1.8s ease forwards;
+  }
+  .arc.a2{animation-delay:.25s;}
+  .arc.a3{animation-delay:.5s;}
+  .pin{
+    opacity:0;
+    animation:fadein .6s ease forwards;
+    animation-delay:1.4s;
+  }
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @keyframes fadein{to{opacity:1;}}
+  @media (prefers-reduced-motion: reduce){
+    .arc{animation:none; stroke-dashoffset:0;}
+    .pin{animation:none; opacity:1;}
+  }
+
+  /* CONTACT BLOCK */
+  .contact-block{
+    margin-top:34px;
+    border:1px solid var(--navy-line);
+    padding:44px 36px;
+  }
+  .contact-email{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:clamp(1.3rem, 3.6vw, 1.9rem);
+    display:inline-block;
+    margin-top:12px;
+    border-bottom:2px solid var(--amber);
+    padding-bottom:2px;
+  }
+
+  /* FOOTER */
+  footer{
+    padding:40px 0 60px;
+    border-top:1px solid var(--navy-line);
+    margin-top:40px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--chalk-dim);
+    letter-spacing:0.04em;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .footer-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+  }
+  .footer-nda{color:var(--chalk); opacity:.85; line-height:1.6;}
+  .legal{border-top:1px solid var(--navy-line); padding-top:12px;}
+  .legal summary{cursor:pointer; color:var(--chalk); width:max-content; list-style:none;}
+  .legal summary::-webkit-details-marker{display:none;}
+  .legal summary::before{content:"+"; color:var(--amber); display:inline-block; width:1.2em;}
+  .legal[open] summary::before{content:"−";}
+  .legal summary:hover{color:var(--amber);}
+  .legal dl{display:grid; grid-template-columns:200px 1fr; gap:10px 24px; margin-top:16px; line-height:1.6;}
+  .legal dt{color:var(--amber); text-transform:uppercase; letter-spacing:0.1em;}
+  .legal dd{color:#c9d5df; font-family:'IBM Plex Sans', sans-serif; font-size:0.82rem; letter-spacing:0;}
+  .legal a{border-bottom:1px solid rgba(242,183,5,.4);}
+  .legal a:hover{color:var(--amber);}
+
+  @media (max-width:720px){
+    .topnav{flex-direction:column; align-items:flex-start; gap:10px; padding:14px 0 12px;}
+    .topnav-links{flex-wrap:nowrap; overflow-x:auto; gap:16px; width:100%; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+    .topnav-links::-webkit-scrollbar{display:none;}
+    .topnav-links a{white-space:nowrap; padding:4px 0;}
+    section{scroll-margin-top:96px;}
+    .who img{width:76px;}
+    .spec-row{grid-template-columns:1fr; gap:6px;}
+    .offer-item{grid-template-columns:1fr; gap:8px;}
+    .zone-layout{grid-template-columns:1fr; gap:20px;}
+    .compass-wrap{order:-1;}
+    .legal dl{grid-template-columns:1fr; gap:4px;}
+    .legal dd{margin-bottom:10px;}
+  }
+</style>
+<style>
+.doc{max-width:860px}
+.doc h2{margin-top:2.2rem}
+.doc h3{margin:1.6rem 0 .4rem}
+.doc p,.doc li{line-height:1.6}
+.doc ul{padding-left:1.2rem}
+.doc .note{font-size:.9rem;opacity:.8}
+.toc{columns:2;gap:2rem}
+@media(max-width:700px){.toc{columns:1}}
+.back{display:inline-block;margin:1rem 0 0}
+.shop{max-width:none}
+.shop > p, .shop > h2{max-width:860px}
+.shop p a{color:var(--amber); text-decoration:underline; text-underline-offset:3px}
+.shop .product p a{color:inherit}
+</style>
+</head>
+<body>
+<div class="grid-overlay" aria-hidden="true"></div>
+<main class="wrap">
+  <header class="topnav">
+    <a class="brand" href="/" style="text-decoration:none;color:inherit">SEITZ FORMATION</a>
+    <nav class="topnav-links">
+      <a href="/#expertise">Expertise</a>
+      <a href="/#offre">Offre</a>
+      <a href="exercices.html">Exercices</a>
+      <a href="cours-defauts-cristallins.html">Cours</a>
+      <a href="videos">Vidéos</a>
+      <a href="boutique" aria-current="page" style="color:var(--amber)">Boutique</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="doc shop">
+    <p class="eyebrow">Boutique</p>
+    <h1 style="font-size:clamp(2rem,5vw,3.2rem)">Cours en PDF à télécharger</h1>
+    <p class="lead-p">Les cours que j'utilise avec mes apprentis de BTS industriels, mis en forme en PDF, avec tous les exercices corrigés. Paiement sécurisé sur Payhip (carte bancaire ou PayPal), téléchargement immédiat.</p>
+    <div class="product">
+      <a href="https://payhip.com/b/db17W" target="_blank" rel="noopener"><img src="cotation-fonctionnelle.webp" width="1200" height="750" alt="Couverture du PDF Cotation fonctionnelle, BTS CRCI / CICN" decoding="async"></a>
+      <div>
+        <div class="tag">BTS CRCI · CICN</div>
+        <h3>Cotation fonctionnelle : cours et exercices corrigés</h3>
+        <p>Des pièces toutes conformes au plan… et l'assemblage ne se monte pas. Cote condition, chaîne de cotes, jeu dans le pire des cas, tolérances : sur des cas de chaudronnerie et de construction navale.</p>
+        <ul>
+          <li>PDF couleur de 31 pages</li>
+          <li>16 exercices entièrement corrigés</li>
+          <li>Tolérances ISO 13920 et ISO 2768, ajustements</li>
+        </ul>
+        <div class="price">9,99 €<small>PDF à télécharger · TVA non applicable, art. 293 B du CGI</small></div>
+        <div class="actions">
+          <a class="cta" href="https://payhip.com/b/db17W" target="_blank" rel="noopener">Acheter sur Payhip <span class="arrow">→</span></a>
+          <a class="cta secondary" href="https://payhip.com/preview/db17W" target="_blank" rel="noopener">Voir un extrait <span class="arrow">→</span></a>
+          <a class="cta secondary" href="cotation-fonctionnelle.html">Sommaire et détails <span class="arrow">→</span></a>
+        </div>
+        <p style="font-size:.85rem;opacity:.75;margin-top:.6rem">Contenu numérique fourni immédiatement : droit de rétractation non applicable après téléchargement. <a href="cgv.html">Conditions générales de vente</a>.</p>
+      </div>
+    </div>
+
+    <h2>Formateurs et établissements</h2>
+    <p>Pour utiliser un cours avec un groupe (diffusion aux apprentis), une licence établissement est proposée sur demande : <a href="mailto:contact@seitzformation.fr?subject=Licence%20%C3%A9tablissement">contact@seitzformation.fr</a>.</p>
+    <p class="note">D'autres cours sont en préparation. Pour un aperçu gratuit de ma façon d'enseigner : un <a href="cours-defauts-cristallins.html">cours en ligne</a>, des <a href="exercices.html">exercices auto-corrigés</a> et des <a href="videos">vidéos</a>.</p>
+  </section>
+
+  <footer>
+    <div class="footer-row">
+      <span>SEITZ FORMATION — EURL au capital de 500 €</span>
+      <span>SIREN 108 720 871</span>
+    </div>
+    <p class="footer-nda">Organisme de formation enregistré sous le numéro 28140495014 auprès du préfet de région Normandie. Cet enregistrement ne vaut pas agrément de l'État.</p>
+    <div class="footer-row" style="color: var(--chalk-dim); opacity: 0.8;">
+      <span>Formateur indépendant · Mathématiques &amp; Sciences Physiques · Tourville-sur-Odon (14210)</span>
+      <span><a href="cgv.html" style="color:inherit">CGV</a> · © 2026 Seitz Formation</span>
+    </div>
+    <details class="legal" id="mentions-legales">
+      <summary>Mentions légales</summary>
+      <dl>
+        <dt>Éditeur</dt>
+        <dd>SEITZ FORMATION, EURL au capital de 500 €<br>Siège social : 3 allée du Pressoir, 14210 Tourville-sur-Odon<br>SIREN 108 720 871 — RCS Caen<br>Tél. 06 30 14 30 83 — <a href="mailto:contact@seitzformation.fr">contact@seitzformation.fr</a></dd>
+        <dt>Directeur de la publication</dt>
+        <dd>Thomas Seitz, gérant</dd>
+        <dt>Déclaration d'activité</dt>
+        <dd>Organisme de formation enregistré sous le numéro 28140495014 auprès du préfet de région Normandie. Cet enregistrement ne vaut pas agrément de l'État.</dd>
+        <dt>Hébergement</dt>
+        <dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — +1 415 857 5430</dd>
+        <dt>Données personnelles</dt>
+        <dd>Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. La plateforme Payhip, sur laquelle s'effectue l'achat des cours en PDF, peut déposer ses propres cookies lors de la commande, selon sa politique de confidentialité. Les informations que vous envoyez par e-mail servent uniquement à répondre à votre demande et ne sont jamais transmises à des tiers. L'assistant en ligne transmet les messages que vous y saisissez à Claude, service d'Anthropic établi aux États-Unis (transfert de données hors de l'Union européenne), uniquement pour générer une réponse ; aucune donnée n'est transmise tant que vous n'envoyez pas de message, ce site ne conserve pas ces échanges et n'utilise ni cookie ni stockage dans votre navigateur pour cela. Ne saisissez pas de données personnelles dans l'assistant. Vous pouvez demander à les consulter, les rectifier ou les supprimer en écrivant à <a href="mailto:contact@seitzformation.fr">contact@seitzformation.fr</a>, et introduire une réclamation auprès de la CNIL.</dd>
+        <dt>Vente en ligne</dt>
+        <dd>Les cours en PDF sont vendus via la plateforme Payhip, selon les <a href="cgv.html">conditions générales de vente</a>.</dd>
+        <dt>Propriété intellectuelle</dt>
+        <dd>Les textes et documents de ce site, dont la plaquette, appartiennent à SEITZ FORMATION. Toute reproduction nécessite son accord préalable.</dd>
+      </dl>
+    </details>
+  </footer>
+</main>
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-copy'), label = b.textContent;
+      var done = function () { b.textContent = 'Adresse copiée ✓'; setTimeout(function () { b.textContent = label; }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () { window.prompt('Adresse e-mail :', t); });
+      else window.prompt('Adresse e-mail :', t);
+    });
+  });
+</script>
+<script src="chat.js" defer></script>
+</body>
+</html>
